@@ -1,0 +1,20 @@
+|subBytes
+clock => ~NO_FANOUT~
+address[0] => Ram0.RADDR
+address[1] => Ram0.RADDR1
+address[2] => Ram0.RADDR2
+address[3] => Ram0.RADDR3
+address[4] => Ram0.RADDR4
+address[5] => Ram0.RADDR5
+address[6] => Ram0.RADDR6
+address[7] => Ram0.RADDR7
+data[0] <= Ram0.DATAOUT
+data[1] <= Ram0.DATAOUT1
+data[2] <= Ram0.DATAOUT2
+data[3] <= Ram0.DATAOUT3
+data[4] <= Ram0.DATAOUT4
+data[5] <= Ram0.DATAOUT5
+data[6] <= Ram0.DATAOUT6
+data[7] <= Ram0.DATAOUT7
+
+

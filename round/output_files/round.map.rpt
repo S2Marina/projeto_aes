@@ -1,0 +1,273 @@
+Analysis & Synthesis report for round
+Mon Nov  4 20:45:15 2019
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Mon Nov  4 20:45:15 2019          ;
+; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; round                                      ;
+; Top-level Entity Name              ; round                                      ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C25F324C6       ;                    ;
+; Top-level entity name                                                      ; round              ; round              ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Nov  4 20:45:13 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off round -c round
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/mixColumns/mixColumns.vhd
+    Info (12022): Found design unit 1: mixColumns-rtl
+    Info (12023): Found entity 1: mixColumns
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/addRoundKey/addRoundKey.vhd
+    Info (12022): Found design unit 1: addRoundKey-rtl
+    Info (12023): Found entity 1: addRoundKey
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/shiftRows4/shiftRows4.vhd
+    Info (12022): Found design unit 1: shiftRows4-rtl
+    Info (12023): Found entity 1: shiftRows4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/shiftRows3/shiftRows3.vhd
+    Info (12022): Found design unit 1: shiftRows3-rtl
+    Info (12023): Found entity 1: shiftRows3
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/shiftRows2/shiftRows2.vhd
+    Info (12022): Found design unit 1: shiftRows2-rtl
+    Info (12023): Found entity 1: shiftRows2
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/subBytes/subBytes.vhd
+    Info (12022): Found design unit 1: subBytes-rtl
+    Info (12023): Found entity 1: subBytes
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/projeto/aes/round.vhd
+    Info (12022): Found design unit 1: round-rtl
+    Info (12023): Found entity 1: round
+Info (12127): Elaborating entity "round" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at round.vhd(34): used implicit default value for signal "enableR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA4" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA5" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA6" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA7" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA9" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA10" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA11" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA12" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA13" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA14" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA15" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(35): object "regA16" assigned a value but never read
+Info (12128): Elaborating entity "shiftRows2" for hierarchy "shiftRows2:sR2"
+Error (12006): Node instance "reg1" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 159
+Error (12006): Node instance "reg2" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 163
+Error (12006): Node instance "reg3" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 167
+Error (12006): Node instance "reg4" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 171
+Error (12006): Node instance "reg5" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 175
+Error (12006): Node instance "reg6" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 179
+Error (12006): Node instance "reg7" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 183
+Error (12006): Node instance "reg8" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 187
+Error (12006): Node instance "reg9" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 191
+Error (12006): Node instance "reg10" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 195
+Error (12006): Node instance "reg11" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 199
+Error (12006): Node instance "reg12" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 203
+Error (12006): Node instance "reg13" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 207
+Error (12006): Node instance "reg14" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 211
+Error (12006): Node instance "reg15" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 215
+Error (12006): Node instance "reg16" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 219
+Error (12006): Node instance "reg17" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 224
+Error (12006): Node instance "reg18" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 228
+Error (12006): Node instance "reg19" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 232
+Error (12006): Node instance "reg20" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 236
+Error (12006): Node instance "reg21" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 240
+Error (12006): Node instance "reg22" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 244
+Error (12006): Node instance "reg23" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 248
+Error (12006): Node instance "reg24" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 252
+Error (12006): Node instance "reg25" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 256
+Error (12006): Node instance "reg26" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 260
+Error (12006): Node instance "reg27" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 264
+Error (12006): Node instance "reg28" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 268
+Error (12006): Node instance "reg29" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 272
+Error (12006): Node instance "reg30" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 276
+Error (12006): Node instance "reg31" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 280
+Error (12006): Node instance "reg32" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 284
+Error (12006): Node instance "reg33" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 290
+Error (12006): Node instance "reg34" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 294
+Error (12006): Node instance "reg35" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 298
+Error (12006): Node instance "reg36" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 302
+Error (12006): Node instance "reg37" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 306
+Error (12006): Node instance "reg38" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 310
+Error (12006): Node instance "reg39" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 314
+Error (12006): Node instance "reg40" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 318
+Error (12006): Node instance "reg41" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 322
+Error (12006): Node instance "reg42" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 326
+Error (12006): Node instance "reg43" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 330
+Error (12006): Node instance "reg44" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 334
+Error (12006): Node instance "reg45" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 338
+Error (12006): Node instance "reg46" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 342
+Error (12006): Node instance "reg47" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 346
+Error (12006): Node instance "reg48" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 350
+Error (12006): Node instance "reg49" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 356
+Error (12006): Node instance "reg50" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 360
+Error (12006): Node instance "reg51" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 364
+Error (12006): Node instance "reg52" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 368
+Error (12006): Node instance "reg53" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 372
+Error (12006): Node instance "reg54" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 376
+Error (12006): Node instance "reg55" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 380
+Error (12006): Node instance "reg56" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 384
+Error (12006): Node instance "reg57" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 388
+Error (12006): Node instance "reg58" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 392
+Error (12006): Node instance "reg59" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 396
+Error (12006): Node instance "reg60" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 400
+Error (12006): Node instance "reg61" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 404
+Error (12006): Node instance "reg62" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 408
+Error (12006): Node instance "reg63" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 412
+Error (12006): Node instance "reg64" instantiates undefined entity "registerNbits" File: /home/marina/Documentos/quartus/projeto/aes/round.vhd Line: 416
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 64 errors, 18 warnings
+    Error: Peak virtual memory: 393 megabytes
+    Error: Processing ended: Mon Nov  4 20:45:15 2019
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
+
+

@@ -42,8 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY aes
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:05:06  OCTOBER 28, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
-set_global_assignment -name VHDL_FILE ../trabalho/registrador.vhd
-set_global_assignment -name VHDL_FILE ../trabalho/rom_subBytes.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -51,4 +49,12 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE ../../PO_Subtrator/Mux2p1.vhd
+set_global_assignment -name VHDL_FILE ../mixColumns/mixColumns.vhd
+set_global_assignment -name VHDL_FILE ../subBytes/subBytes.vhd
+set_global_assignment -name VHDL_FILE ../shiftRows4/shiftRows4.vhd
+set_global_assignment -name VHDL_FILE ../shiftRows3/shiftRows3.vhd
+set_global_assignment -name VHDL_FILE ../shiftRows2/shiftRows2.vhd
+set_global_assignment -name VHDL_FILE ../addRoundKey/addRoundKey.vhd
+set_global_assignment -name VHDL_FILE ../../PO_Subtrator/RegisterNbits.vhd
 set_global_assignment -name VHDL_FILE aes.vhd
