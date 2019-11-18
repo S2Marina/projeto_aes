@@ -13,10 +13,10 @@
 -- applicable agreement for further details.
 
 -- VENDOR "Altera"
--- PROGRAM "Quartus II 64-Bit"
+-- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "10/28/2019 16:27:58"
+-- DATE "11/18/2019 16:26:24"
 
 -- 
 -- Device: Altera EP3C25F324C6 Package FBGA324
@@ -38,10 +38,10 @@ ENTITY 	mixColumns IS
 	entrada2 : IN std_logic_vector(7 DOWNTO 0);
 	entrada3 : IN std_logic_vector(7 DOWNTO 0);
 	entrada4 : IN std_logic_vector(7 DOWNTO 0);
-	saida1 : OUT std_logic_vector(7 DOWNTO 0);
-	saida2 : OUT std_logic_vector(7 DOWNTO 0);
-	saida3 : OUT std_logic_vector(7 DOWNTO 0);
-	saida4 : OUT std_logic_vector(7 DOWNTO 0)
+	saida1 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida2 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida3 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida4 : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END mixColumns;
 

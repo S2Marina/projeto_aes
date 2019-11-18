@@ -1,6 +1,6 @@
 vendor_name = ModelSim
-source_file = 1, /home/marina/Documentos/quartus/projeto/mixColumns/mixColumns.vhd
-source_file = 1, /home/marina/Documentos/quartus/projeto/mixColumns/db/mixColumns.cbx.xml
+source_file = 1, /home/marina/Documentos/projeto_aes/mixColumns/mixColumns.vhd
+source_file = 1, /home/marina/Documentos/projeto_aes/mixColumns/db/mixColumns.cbx.xml
 source_file = 1, /home/marina/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/marina/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /home/marina/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
