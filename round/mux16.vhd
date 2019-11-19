@@ -32,7 +32,7 @@ entity mux16 is
 
 end entity;
 
-architecture rtl of mux2p1 is
+architecture rtl of mux16 is
 begin
 
 	result <= e1 when (sel = "0000") else

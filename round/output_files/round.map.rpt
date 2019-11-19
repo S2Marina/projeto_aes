@@ -1,5 +1,5 @@
 Analysis & Synthesis report for round
-Fri Nov 15 21:02:52 2019
+Mon Nov 18 20:42:59 2019
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,21 @@ Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |round
+ 10. Parameter Settings for User Entity Instance: shiftRows2:sR2
+ 11. Parameter Settings for User Entity Instance: shiftRows3:sR3
+ 12. Parameter Settings for User Entity Instance: shiftRows4:sR4
+ 13. Parameter Settings for User Entity Instance: mux16:muxMemoria
+ 14. Port Connectivity Checks: "subBytes:rom"
+ 15. Port Connectivity Checks: "shiftRows4:sR4"
+ 16. Port Connectivity Checks: "shiftRows3:sR3"
+ 17. Port Connectivity Checks: "shiftRows2:sR2"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +50,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Nov 15 21:02:52 2019          ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 18 20:42:58 2019      ;
 ; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; round                                      ;
 ; Top-level Entity Name              ; round                                      ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 129                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -151,13 +165,185 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; ../shiftRows4/shiftRows4.vhd     ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/shiftRows4/shiftRows4.vhd ;         ;
+; ../shiftRows3/shiftRows3.vhd     ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/shiftRows3/shiftRows3.vhd ;         ;
+; ../shiftRows2/shiftRows2.vhd     ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/shiftRows2/shiftRows2.vhd ;         ;
+; ../subBytes/subBytes.vhd         ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/subBytes/subBytes.vhd     ;         ;
+; ../aes/round.vhd                 ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/aes/round.vhd             ;         ;
+; mux16.vhd                        ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/mux16.vhd           ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 129   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 129   ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |round                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 129  ; 0            ; |round              ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |round ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRows2:sR2 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRows3:sR3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRows4:sR4 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux16:muxMemoria ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "subBytes:rom"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftRows4:sR4"                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; saida1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftRows3:sR3"                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; saida1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftRows2:sR2"                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; saida1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Nov 15 21:02:50 2019
+    Info: Processing started: Mon Nov 18 20:42:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off round -c round
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/mixColumns/mixColumns.vhd
@@ -178,19 +364,186 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/m
 Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/subBytes/subBytes.vhd
     Info (12022): Found design unit 1: subBytes-rtl
     Info (12023): Found entity 1: subBytes
-Error (10500): VHDL syntax error at round.vhd(434) near text ",";  expecting "(", or an identifier, or  unary operator File: /home/marina/Documentos/projeto_aes/aes/round.vhd Line: 434
-Error (10500): VHDL syntax error at round.vhd(434) near text ")";  expecting "(", or an identifier, or  unary operator File: /home/marina/Documentos/projeto_aes/aes/round.vhd Line: 434
-Info (12021): Found 0 design units, including 0 entities, in source file /home/marina/Documentos/projeto_aes/aes/round.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/aes/round.vhd
+    Info (12022): Found design unit 1: round-rtl
+    Info (12023): Found entity 1: round
 Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
     Info (12022): Found design unit 1: mux2-rtl
     Info (12023): Found entity 1: mux2
 Info (12021): Found 2 design units, including 1 entities, in source file mux16.vhd
-    Info (12022): Found design unit 1: mux2p1-rtl
+    Info (12022): Found design unit 1: mux16-rtl
     Info (12023): Found entity 1: mux16
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 389 megabytes
-    Error: Processing ended: Fri Nov 15 21:02:52 2019
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12127): Elaborating entity "round" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at round.vhd(35): used implicit default value for signal "selMemoria" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(36): object "sMemoria" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub10" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub11" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub12" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub13" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub14" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub15" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at round.vhd(38): used implicit default value for signal "regSub16" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh5" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh6" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh7" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh9" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh10" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh11" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh12" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh13" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh14" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh15" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at round.vhd(39): object "regSh16" assigned a value but never read
+Info (12128): Elaborating entity "shiftRows2" for hierarchy "shiftRows2:sR2"
+Info (12128): Elaborating entity "shiftRows3" for hierarchy "shiftRows3:sR3"
+Info (12128): Elaborating entity "shiftRows4" for hierarchy "shiftRows4:sR4"
+Info (12128): Elaborating entity "subBytes" for hierarchy "subBytes:rom"
+Info (12128): Elaborating entity "mux16" for hierarchy "mux16:muxMemoria"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 129 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "entrada1[0]"
+    Warning (15610): No output dependent on input pin "entrada1[1]"
+    Warning (15610): No output dependent on input pin "entrada1[2]"
+    Warning (15610): No output dependent on input pin "entrada1[3]"
+    Warning (15610): No output dependent on input pin "entrada1[4]"
+    Warning (15610): No output dependent on input pin "entrada1[5]"
+    Warning (15610): No output dependent on input pin "entrada1[6]"
+    Warning (15610): No output dependent on input pin "entrada1[7]"
+    Warning (15610): No output dependent on input pin "entrada2[0]"
+    Warning (15610): No output dependent on input pin "entrada2[1]"
+    Warning (15610): No output dependent on input pin "entrada2[2]"
+    Warning (15610): No output dependent on input pin "entrada2[3]"
+    Warning (15610): No output dependent on input pin "entrada2[4]"
+    Warning (15610): No output dependent on input pin "entrada2[5]"
+    Warning (15610): No output dependent on input pin "entrada2[6]"
+    Warning (15610): No output dependent on input pin "entrada2[7]"
+    Warning (15610): No output dependent on input pin "entrada3[0]"
+    Warning (15610): No output dependent on input pin "entrada3[1]"
+    Warning (15610): No output dependent on input pin "entrada3[2]"
+    Warning (15610): No output dependent on input pin "entrada3[3]"
+    Warning (15610): No output dependent on input pin "entrada3[4]"
+    Warning (15610): No output dependent on input pin "entrada3[5]"
+    Warning (15610): No output dependent on input pin "entrada3[6]"
+    Warning (15610): No output dependent on input pin "entrada3[7]"
+    Warning (15610): No output dependent on input pin "entrada4[0]"
+    Warning (15610): No output dependent on input pin "entrada4[1]"
+    Warning (15610): No output dependent on input pin "entrada4[2]"
+    Warning (15610): No output dependent on input pin "entrada4[3]"
+    Warning (15610): No output dependent on input pin "entrada4[4]"
+    Warning (15610): No output dependent on input pin "entrada4[5]"
+    Warning (15610): No output dependent on input pin "entrada4[6]"
+    Warning (15610): No output dependent on input pin "entrada4[7]"
+    Warning (15610): No output dependent on input pin "entrada5[0]"
+    Warning (15610): No output dependent on input pin "entrada5[1]"
+    Warning (15610): No output dependent on input pin "entrada5[2]"
+    Warning (15610): No output dependent on input pin "entrada5[3]"
+    Warning (15610): No output dependent on input pin "entrada5[4]"
+    Warning (15610): No output dependent on input pin "entrada5[5]"
+    Warning (15610): No output dependent on input pin "entrada5[6]"
+    Warning (15610): No output dependent on input pin "entrada5[7]"
+    Warning (15610): No output dependent on input pin "entrada6[0]"
+    Warning (15610): No output dependent on input pin "entrada6[1]"
+    Warning (15610): No output dependent on input pin "entrada6[2]"
+    Warning (15610): No output dependent on input pin "entrada6[3]"
+    Warning (15610): No output dependent on input pin "entrada6[4]"
+    Warning (15610): No output dependent on input pin "entrada6[5]"
+    Warning (15610): No output dependent on input pin "entrada6[6]"
+    Warning (15610): No output dependent on input pin "entrada6[7]"
+    Warning (15610): No output dependent on input pin "entrada7[0]"
+    Warning (15610): No output dependent on input pin "entrada7[1]"
+    Warning (15610): No output dependent on input pin "entrada7[2]"
+    Warning (15610): No output dependent on input pin "entrada7[3]"
+    Warning (15610): No output dependent on input pin "entrada7[4]"
+    Warning (15610): No output dependent on input pin "entrada7[5]"
+    Warning (15610): No output dependent on input pin "entrada7[6]"
+    Warning (15610): No output dependent on input pin "entrada7[7]"
+    Warning (15610): No output dependent on input pin "entrada8[0]"
+    Warning (15610): No output dependent on input pin "entrada8[1]"
+    Warning (15610): No output dependent on input pin "entrada8[2]"
+    Warning (15610): No output dependent on input pin "entrada8[3]"
+    Warning (15610): No output dependent on input pin "entrada8[4]"
+    Warning (15610): No output dependent on input pin "entrada8[5]"
+    Warning (15610): No output dependent on input pin "entrada8[6]"
+    Warning (15610): No output dependent on input pin "entrada8[7]"
+    Warning (15610): No output dependent on input pin "entrada9[0]"
+    Warning (15610): No output dependent on input pin "entrada9[1]"
+    Warning (15610): No output dependent on input pin "entrada9[2]"
+    Warning (15610): No output dependent on input pin "entrada9[3]"
+    Warning (15610): No output dependent on input pin "entrada9[4]"
+    Warning (15610): No output dependent on input pin "entrada9[5]"
+    Warning (15610): No output dependent on input pin "entrada9[6]"
+    Warning (15610): No output dependent on input pin "entrada9[7]"
+    Warning (15610): No output dependent on input pin "entrada10[0]"
+    Warning (15610): No output dependent on input pin "entrada10[1]"
+    Warning (15610): No output dependent on input pin "entrada10[2]"
+    Warning (15610): No output dependent on input pin "entrada10[3]"
+    Warning (15610): No output dependent on input pin "entrada10[4]"
+    Warning (15610): No output dependent on input pin "entrada10[5]"
+    Warning (15610): No output dependent on input pin "entrada10[6]"
+    Warning (15610): No output dependent on input pin "entrada10[7]"
+    Warning (15610): No output dependent on input pin "entrada11[0]"
+    Warning (15610): No output dependent on input pin "entrada11[1]"
+    Warning (15610): No output dependent on input pin "entrada11[2]"
+    Warning (15610): No output dependent on input pin "entrada11[3]"
+    Warning (15610): No output dependent on input pin "entrada11[4]"
+    Warning (15610): No output dependent on input pin "entrada11[5]"
+    Warning (15610): No output dependent on input pin "entrada11[6]"
+    Warning (15610): No output dependent on input pin "entrada11[7]"
+    Warning (15610): No output dependent on input pin "entrada12[0]"
+    Warning (15610): No output dependent on input pin "entrada12[1]"
+    Warning (15610): No output dependent on input pin "entrada12[2]"
+    Warning (15610): No output dependent on input pin "entrada12[3]"
+    Warning (15610): No output dependent on input pin "entrada12[4]"
+    Warning (15610): No output dependent on input pin "entrada12[5]"
+    Warning (15610): No output dependent on input pin "entrada12[6]"
+    Warning (15610): No output dependent on input pin "entrada12[7]"
+    Warning (15610): No output dependent on input pin "entrada13[0]"
+    Warning (15610): No output dependent on input pin "entrada13[1]"
+    Warning (15610): No output dependent on input pin "entrada13[2]"
+    Warning (15610): No output dependent on input pin "entrada13[3]"
+    Warning (15610): No output dependent on input pin "entrada13[4]"
+    Warning (15610): No output dependent on input pin "entrada13[5]"
+    Warning (15610): No output dependent on input pin "entrada13[6]"
+    Warning (15610): No output dependent on input pin "entrada13[7]"
+    Warning (15610): No output dependent on input pin "entrada14[0]"
+    Warning (15610): No output dependent on input pin "entrada14[1]"
+    Warning (15610): No output dependent on input pin "entrada14[2]"
+    Warning (15610): No output dependent on input pin "entrada14[3]"
+    Warning (15610): No output dependent on input pin "entrada14[4]"
+    Warning (15610): No output dependent on input pin "entrada14[5]"
+    Warning (15610): No output dependent on input pin "entrada14[6]"
+    Warning (15610): No output dependent on input pin "entrada14[7]"
+    Warning (15610): No output dependent on input pin "entrada15[0]"
+    Warning (15610): No output dependent on input pin "entrada15[1]"
+    Warning (15610): No output dependent on input pin "entrada15[2]"
+    Warning (15610): No output dependent on input pin "entrada15[3]"
+    Warning (15610): No output dependent on input pin "entrada15[4]"
+    Warning (15610): No output dependent on input pin "entrada15[5]"
+    Warning (15610): No output dependent on input pin "entrada15[6]"
+    Warning (15610): No output dependent on input pin "entrada15[7]"
+    Warning (15610): No output dependent on input pin "entrada16[0]"
+    Warning (15610): No output dependent on input pin "entrada16[1]"
+    Warning (15610): No output dependent on input pin "entrada16[2]"
+    Warning (15610): No output dependent on input pin "entrada16[3]"
+    Warning (15610): No output dependent on input pin "entrada16[4]"
+    Warning (15610): No output dependent on input pin "entrada16[5]"
+    Warning (15610): No output dependent on input pin "entrada16[6]"
+    Warning (15610): No output dependent on input pin "entrada16[7]"
+Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 129 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 157 warnings
+    Info: Peak virtual memory: 396 megabytes
+    Info: Processing ended: Mon Nov 18 20:42:59 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

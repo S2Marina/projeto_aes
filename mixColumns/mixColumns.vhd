@@ -25,37 +25,30 @@ entity mixColumns is
 end entity;
 
 architecture rtl of mixColumns is
-   signal shift2_e1, shift2_e2, shift2_e3, shift2_e4, shift3_e1, shift3_e2, shift3_e3, shift3_e4 : std_logic_vector((DATA_WIDTH-1) downto 0);
-	--signal dois : std_logic_vector  ((DATA_WIDTH-1) downto 0):= (1=>'1', others=>'0');
+   signal shift_e1, shift_e2, shift_e3, shift_e4, xor_e1, xor_e2, xor_e3, xor_e4 : std_logic_vector((DATA_WIDTH-1) downto 0);
+	
 	
 begin
-	--shift2_e1 <= std_logic_vector(shift_left(unsigned(entrada1), to_integer(unsigned(dois))));
-	--shift3_e2 <= std_logic_vector(shift_left(unsigned(entrada2), to_integer(unsigned(dois)))) xor entrada2;
+	shift_e1 <= std_logic_vector(shift_left(unsigned(entrada1), 2)) when (entrada1(7) = '0') else 
+	            std_logic_vector(shift_left(unsigned(entrada1), 2)) xor "00011011";
+					
+	shift_e2 <= std_logic_vector(shift_left(unsigned(entrada2), 2)) when (entrada2(7) = '0') else 
+	            std_logic_vector(shift_left(unsigned(entrada2), 2)) xor "00011011";
+					
+	shift_e3 <= std_logic_vector(shift_left(unsigned(entrada3), 2)) when (entrada3(7) = '0') else 
+               std_logic_vector(shift_left(unsigned(entrada3), 2)) xor "00011011";
+					
+	shift_e4 <= std_logic_vector(shift_left(unsigned(entrada4), 2)) when (entrada4(7) = '0') else 
+	            std_logic_vector(shift_left(unsigned(entrada4), 2)) xor "00011011";
 	
-	--shift2_e2 <= std_logic_vector(shift_left(unsigned(entrada2), to_integer(unsigned(dois))));
-	--shift3_e3 <= std_logic_vector(shift_left(unsigned(entrada3), to_integer(unsigned(dois)))) xor entrada3;
-	
-	--shift2_e3 <= std_logic_vector(shift_left(unsigned(entrada3), to_integer(unsigned(dois))));
-	--shift3_e4 <= std_logic_vector(shift_left(unsigned(entrada4), to_integer(unsigned(dois)))) xor entrada4;
-	
-	--shift2_e4 <= std_logic_vector(shift_left(unsigned(entrada4), to_integer(unsigned(dois))));
-	--shift3_e1 <= std_logic_vector(shift_left(unsigned(entrada1), to_integer(unsigned(dois)))) xor entrada1;
-	
-	shift2_e1 <= std_logic_vector(shift_left(unsigned(entrada1), 2));
-	shift3_e2 <= std_logic_vector(shift_left(unsigned(entrada2), 2)) xor entrada2;
-	
-	shift2_e2 <= std_logic_vector(shift_left(unsigned(entrada2), 2));
-	shift3_e3 <= std_logic_vector(shift_left(unsigned(entrada3), 2)) xor entrada3;
-	
-	shift2_e3 <= std_logic_vector(shift_left(unsigned(entrada3), 2));
-	shift3_e4 <= std_logic_vector(shift_left(unsigned(entrada4), 2)) xor entrada4;
-	
-	shift2_e4 <= std_logic_vector(shift_left(unsigned(entrada4), 2));
-	shift3_e1 <= std_logic_vector(shift_left(unsigned(entrada1), 2)) xor entrada1;
-	
-	saida1 <= shift2_e1 xor shift3_e2 xor entrada3 xor entrada4;  
-	saida2 <= entrada1 xor shift2_e2 xor shift3_e3 xor entrada4;  
-	saida3 <= entrada1 xor entrada2 xor shift2_e3 xor shift3_e4;  	
-	saida4 <= shift3_e1 xor entrada2 xor entrada3 xor shift2_e4;  
+	xor_e1 <= shift_e1 xor entrada1;
+	xor_e2 <= shift_e2 xor entrada2;
+	xor_e3 <= shift_e3 xor entrada3;
+	xor_e4 <= shift_e4 xor entrada4;
+
+	saida1 <= shift_e1 xor xor_e2 xor entrada3 xor entrada4;  
+	saida2 <= entrada1 xor shift_e2 xor xor_e3 xor entrada4;  
+	saida3 <= entrada1 xor entrada2 xor shift_e3 xor xor_e4;  	
+	saida4 <= xor_e1 xor entrada2 xor entrada3 xor shift_e4;  
 	
 end rtl;

@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity subBytes is
-    Port (
+    port (
 	 clock    : std_logic;
     address  : in std_logic_Vector(7 downto 0);
     data     : out std_logic_Vector(7 downto 0)
