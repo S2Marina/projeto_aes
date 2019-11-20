@@ -102,7 +102,7 @@ component addRoundKey is
 end component;
 
 component subBytes is
-	Port (
+	port (
 	 clock    : std_logic;
     address  : in std_logic_Vector(7 downto 0);
     data     : out std_logic_Vector(7 downto 0)

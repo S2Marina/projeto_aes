@@ -1,3 +1,4 @@
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -30,16 +31,16 @@ architecture rtl of mixColumns is
 	
 begin
 	shift_e1 <= std_logic_vector(shift_left(unsigned(entrada1), 2)) when (entrada1(7) = '0') else 
-	            std_logic_vector(shift_left(unsigned(entrada1), 2)) xor "00011011";
+	           std_logic_vector(shift_left(unsigned(entrada1), 2)) xor "00011011";
 					
 	shift_e2 <= std_logic_vector(shift_left(unsigned(entrada2), 2)) when (entrada2(7) = '0') else 
-	            std_logic_vector(shift_left(unsigned(entrada2), 2)) xor "00011011";
+	           std_logic_vector(shift_left(unsigned(entrada2), 2)) xor "00011011";
 					
 	shift_e3 <= std_logic_vector(shift_left(unsigned(entrada3), 2)) when (entrada3(7) = '0') else 
-               std_logic_vector(shift_left(unsigned(entrada3), 2)) xor "00011011";
+             std_logic_vector(shift_left(unsigned(entrada3), 2)) xor "00011011";
 					
 	shift_e4 <= std_logic_vector(shift_left(unsigned(entrada4), 2)) when (entrada4(7) = '0') else 
-	            std_logic_vector(shift_left(unsigned(entrada4), 2)) xor "00011011";
+	           std_logic_vector(shift_left(unsigned(entrada4), 2)) xor "00011011";
 	
 	xor_e1 <= shift_e1 xor entrada1;
 	xor_e2 <= shift_e2 xor entrada2;
