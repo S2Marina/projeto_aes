@@ -1,5 +1,5 @@
 Analysis & Synthesis report for round
-Thu Nov 21 00:54:20 2019
+Thu Nov 21 14:10:04 2019
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -114,7 +114,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 21 00:54:20 2019      ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 21 14:10:04 2019      ;
 ; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; round                                      ;
 ; Top-level Entity Name              ; round                                      ;
@@ -136,7 +136,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C120F780I7      ;                    ;
+; Device                                                                     ; EP3C40F780I7       ;                    ;
 ; Top-level entity name                                                      ; round              ; round              ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -229,20 +229,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path             ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; ../../quartus/PO_Subtrator/RegisterNbits.vhd ; yes             ; User VHDL File  ; /home/marina/Documentos/quartus/PO_Subtrator/RegisterNbits.vhd  ;         ;
-; ../mixColumns/mixColumns.vhd                 ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/mixColumns/mixColumns.vhd   ;         ;
-; ../addRoundKey/addRoundKey.vhd               ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/addRoundKey/addRoundKey.vhd ;         ;
-; ../shiftRows4/shiftRows4.vhd                 ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/shiftRows4/shiftRows4.vhd   ;         ;
-; ../shiftRows3/shiftRows3.vhd                 ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/shiftRows3/shiftRows3.vhd   ;         ;
-; ../shiftRows2/shiftRows2.vhd                 ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/shiftRows2/shiftRows2.vhd   ;         ;
-; ../subBytes/subBytes.vhd                     ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/subBytes/subBytes.vhd       ;         ;
-; ../aes/round.vhd                             ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/aes/round.vhd               ;         ;
-+----------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; mixColumns.vhd                   ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/mixColumns.vhd    ;         ;
+; shiftRows4.vhd                   ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/shiftRows4.vhd    ;         ;
+; shiftRows3.vhd                   ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/shiftRows3.vhd    ;         ;
+; shiftRows2.vhd                   ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/shiftRows2.vhd    ;         ;
+; RegisterNbits.vhd                ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/RegisterNbits.vhd ;         ;
+; addRoundKey.vhd                  ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/addRoundKey.vhd   ;         ;
+; subBytes.vhd                     ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/subBytes.vhd      ;         ;
+; round.vhd                        ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/round.vhd         ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1091,39 +1091,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Nov 21 00:54:17 2019
+    Info: Processing started: Thu Nov 21 14:10:02 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off round -c round
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/quartus/PO_Subtrator/RegisterNbits.vhd
-    Info (12022): Found design unit 1: registerNbits-rtl
-    Info (12023): Found entity 1: registerNbits
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/mixColumns/mixColumns.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file mixColumns.vhd
     Info (12022): Found design unit 1: mixColumns-rtl
     Info (12023): Found entity 1: mixColumns
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/addRoundKey/addRoundKey.vhd
-    Info (12022): Found design unit 1: addRoundKey-rtl
-    Info (12023): Found entity 1: addRoundKey
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/shiftRows4/shiftRows4.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file shiftRows4.vhd
     Info (12022): Found design unit 1: shiftRows4-rtl
     Info (12023): Found entity 1: shiftRows4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/shiftRows3/shiftRows3.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file shiftRows3.vhd
     Info (12022): Found design unit 1: shiftRows3-rtl
     Info (12023): Found entity 1: shiftRows3
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/shiftRows2/shiftRows2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file shiftRows2.vhd
     Info (12022): Found design unit 1: shiftRows2-rtl
     Info (12023): Found entity 1: shiftRows2
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/subBytes/subBytes.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file RegisterNbits.vhd
+    Info (12022): Found design unit 1: registerNbits-rtl
+    Info (12023): Found entity 1: registerNbits
+Info (12021): Found 2 design units, including 1 entities, in source file addRoundKey.vhd
+    Info (12022): Found design unit 1: addRoundKey-rtl
+    Info (12023): Found entity 1: addRoundKey
+Info (12021): Found 2 design units, including 1 entities, in source file subBytes.vhd
     Info (12022): Found design unit 1: subBytes-rtl
     Info (12023): Found entity 1: subBytes
-Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/aes/round.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file round.vhd
     Info (12022): Found design unit 1: round-rtl
     Info (12023): Found entity 1: round
-Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
-    Info (12022): Found design unit 1: mux2-rtl
-    Info (12023): Found entity 1: mux2
-Info (12021): Found 2 design units, including 1 entities, in source file mux16.vhd
-    Info (12022): Found design unit 1: mux16-rtl
-    Info (12023): Found entity 1: mux16
 Info (12127): Elaborating entity "round" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at round.vhd(66): used implicit default value for signal "enableR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "registerNbits" for hierarchy "registerNbits:r1"
@@ -1285,9 +1279,9 @@ Info (21057): Implemented 385 device resources after synthesis - the final resou
     Info (21058): Implemented 257 input pins
     Info (21059): Implemented 128 output pins
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 148 warnings
-    Info: Peak virtual memory: 404 megabytes
-    Info: Processing ended: Thu Nov 21 00:54:20 2019
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 409 megabytes
+    Info: Processing ended: Thu Nov 21 14:10:04 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 
