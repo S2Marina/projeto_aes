@@ -1,0 +1,1046 @@
+Analysis & Synthesis report for last_round
+Thu Nov 21 14:36:28 2019
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |last_round
+ 11. Parameter Settings for User Entity Instance: registerNbits:r1
+ 12. Parameter Settings for User Entity Instance: registerNbits:r2
+ 13. Parameter Settings for User Entity Instance: registerNbits:r3
+ 14. Parameter Settings for User Entity Instance: registerNbits:r4
+ 15. Parameter Settings for User Entity Instance: registerNbits:r5
+ 16. Parameter Settings for User Entity Instance: registerNbits:r6
+ 17. Parameter Settings for User Entity Instance: registerNbits:r7
+ 18. Parameter Settings for User Entity Instance: registerNbits:r8
+ 19. Parameter Settings for User Entity Instance: registerNbits:r9
+ 20. Parameter Settings for User Entity Instance: registerNbits:r10
+ 21. Parameter Settings for User Entity Instance: registerNbits:r11
+ 22. Parameter Settings for User Entity Instance: registerNbits:r12
+ 23. Parameter Settings for User Entity Instance: registerNbits:r13
+ 24. Parameter Settings for User Entity Instance: registerNbits:r14
+ 25. Parameter Settings for User Entity Instance: registerNbits:r15
+ 26. Parameter Settings for User Entity Instance: registerNbits:r16
+ 27. Parameter Settings for User Entity Instance: registerNbits:r33
+ 28. Parameter Settings for User Entity Instance: registerNbits:r34
+ 29. Parameter Settings for User Entity Instance: registerNbits:r35
+ 30. Parameter Settings for User Entity Instance: registerNbits:r36
+ 31. Parameter Settings for User Entity Instance: registerNbits:r37
+ 32. Parameter Settings for User Entity Instance: registerNbits:r38
+ 33. Parameter Settings for User Entity Instance: registerNbits:r39
+ 34. Parameter Settings for User Entity Instance: registerNbits:r40
+ 35. Parameter Settings for User Entity Instance: registerNbits:r41
+ 36. Parameter Settings for User Entity Instance: registerNbits:r42
+ 37. Parameter Settings for User Entity Instance: registerNbits:r43
+ 38. Parameter Settings for User Entity Instance: registerNbits:r44
+ 39. Parameter Settings for User Entity Instance: registerNbits:r45
+ 40. Parameter Settings for User Entity Instance: registerNbits:r46
+ 41. Parameter Settings for User Entity Instance: registerNbits:r47
+ 42. Parameter Settings for User Entity Instance: registerNbits:r48
+ 43. Parameter Settings for User Entity Instance: shiftRows2:sR2
+ 44. Parameter Settings for User Entity Instance: shiftRows3:sR3
+ 45. Parameter Settings for User Entity Instance: shiftRows4:sR4
+ 46. Parameter Settings for User Entity Instance: addRoundKey:adK1
+ 47. Parameter Settings for User Entity Instance: addRoundKey:adK2
+ 48. Parameter Settings for User Entity Instance: addRoundKey:adK3
+ 49. Parameter Settings for User Entity Instance: addRoundKey:adK4
+ 50. Parameter Settings for User Entity Instance: addRoundKey:adK5
+ 51. Parameter Settings for User Entity Instance: addRoundKey:adK6
+ 52. Parameter Settings for User Entity Instance: addRoundKey:adK7
+ 53. Parameter Settings for User Entity Instance: addRoundKey:adK8
+ 54. Parameter Settings for User Entity Instance: addRoundKey:adK9
+ 55. Parameter Settings for User Entity Instance: addRoundKey:adK10
+ 56. Parameter Settings for User Entity Instance: addRoundKey:adK11
+ 57. Parameter Settings for User Entity Instance: addRoundKey:adK12
+ 58. Parameter Settings for User Entity Instance: addRoundKey:adK13
+ 59. Parameter Settings for User Entity Instance: addRoundKey:adK14
+ 60. Parameter Settings for User Entity Instance: addRoundKey:adK15
+ 61. Parameter Settings for User Entity Instance: addRoundKey:adK16
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 21 14:36:28 2019      ;
+; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; last_round                                 ;
+; Top-level Entity Name              ; last_round                                 ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 385                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C40F780I7       ;                    ;
+; Top-level entity name                                                      ; last_round         ; last_round         ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; ../round/subBytes.vhd            ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/subBytes.vhd        ;         ;
+; ../round/shiftRows4.vhd          ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/shiftRows4.vhd      ;         ;
+; ../round/shiftRows3.vhd          ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/shiftRows3.vhd      ;         ;
+; ../round/shiftRows2.vhd          ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/shiftRows2.vhd      ;         ;
+; ../round/RegisterNbits.vhd       ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/RegisterNbits.vhd   ;         ;
+; ../round/addRoundKey.vhd         ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/round/addRoundKey.vhd     ;         ;
+; last_round.vhd                   ; yes             ; User VHDL File  ; /home/marina/Documentos/projeto_aes/last_round/last_round.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 385   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 513   ;
+; Average fan-out                             ; 0.67  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |last_round                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 385  ; 0            ; |last_round         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; registerNbits:r48|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r47|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r46|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r45|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r44|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r43|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r42|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r41|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r40|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r39|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r38|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r37|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r36|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r35|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r34|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r33|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r16|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r15|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r14|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r13|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r12|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r11|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r10|q[0..7]               ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r9|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r8|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r7|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r6|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r5|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r4|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r3|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r2|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; registerNbits:r1|q[0..7]                ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 256 ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |last_round ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r3 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r4 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r5 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r6 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r7 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r8 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r9 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r10 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r11 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r12 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r13 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r14 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r15 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r16 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r33 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r34 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r35 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r36 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r37 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r38 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r39 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r40 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r41 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r42 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r43 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r44 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r45 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r46 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r47 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerNbits:r48 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRows2:sR2 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRows3:sR3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRows4:sR4 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK3 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK4 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK5 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK6 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK7 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK8 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK9 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK10 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK11 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK12 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK13 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK14 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK15 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addRoundKey:adK16 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu Nov 21 14:36:22 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off last_round -c last_round
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/round/subBytes.vhd
+    Info (12022): Found design unit 1: subBytes-rtl
+    Info (12023): Found entity 1: subBytes
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/round/shiftRows4.vhd
+    Info (12022): Found design unit 1: shiftRows4-rtl
+    Info (12023): Found entity 1: shiftRows4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/round/shiftRows3.vhd
+    Info (12022): Found design unit 1: shiftRows3-rtl
+    Info (12023): Found entity 1: shiftRows3
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/round/shiftRows2.vhd
+    Info (12022): Found design unit 1: shiftRows2-rtl
+    Info (12023): Found entity 1: shiftRows2
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/round/RegisterNbits.vhd
+    Info (12022): Found design unit 1: registerNbits-rtl
+    Info (12023): Found entity 1: registerNbits
+Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/round/addRoundKey.vhd
+    Info (12022): Found design unit 1: addRoundKey-rtl
+    Info (12023): Found entity 1: addRoundKey
+Info (12021): Found 2 design units, including 1 entities, in source file last_round.vhd
+    Info (12022): Found design unit 1: last_round-rtl
+    Info (12023): Found entity 1: last_round
+Info (12127): Elaborating entity "last_round" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at last_round.vhd(66): used implicit default value for signal "enableR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "registerNbits" for hierarchy "registerNbits:r1"
+Info (12128): Elaborating entity "subBytes" for hierarchy "subBytes:rom"
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(309): signal "address1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(570): signal "address2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(828): signal "address3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(1086): signal "address4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(1344): signal "address5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(1602): signal "address6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(1860): signal "address7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(2118): signal "address8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(2376): signal "address9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(2634): signal "address10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(2892): signal "address11" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(3150): signal "address12" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(3408): signal "address13" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(3666): signal "address14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(3924): signal "address15" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subBytes.vhd(4182): signal "address16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "shiftRows2" for hierarchy "shiftRows2:sR2"
+Info (12128): Elaborating entity "shiftRows3" for hierarchy "shiftRows3:sR3"
+Info (12128): Elaborating entity "shiftRows4" for hierarchy "shiftRows4:sR4"
+Info (12128): Elaborating entity "addRoundKey" for hierarchy "addRoundKey:adK1"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 129 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "entrada1[0]"
+    Warning (15610): No output dependent on input pin "entrada1[1]"
+    Warning (15610): No output dependent on input pin "entrada1[2]"
+    Warning (15610): No output dependent on input pin "entrada1[3]"
+    Warning (15610): No output dependent on input pin "entrada1[4]"
+    Warning (15610): No output dependent on input pin "entrada1[5]"
+    Warning (15610): No output dependent on input pin "entrada1[6]"
+    Warning (15610): No output dependent on input pin "entrada1[7]"
+    Warning (15610): No output dependent on input pin "entrada2[0]"
+    Warning (15610): No output dependent on input pin "entrada2[1]"
+    Warning (15610): No output dependent on input pin "entrada2[2]"
+    Warning (15610): No output dependent on input pin "entrada2[3]"
+    Warning (15610): No output dependent on input pin "entrada2[4]"
+    Warning (15610): No output dependent on input pin "entrada2[5]"
+    Warning (15610): No output dependent on input pin "entrada2[6]"
+    Warning (15610): No output dependent on input pin "entrada2[7]"
+    Warning (15610): No output dependent on input pin "entrada3[0]"
+    Warning (15610): No output dependent on input pin "entrada3[1]"
+    Warning (15610): No output dependent on input pin "entrada3[2]"
+    Warning (15610): No output dependent on input pin "entrada3[3]"
+    Warning (15610): No output dependent on input pin "entrada3[4]"
+    Warning (15610): No output dependent on input pin "entrada3[5]"
+    Warning (15610): No output dependent on input pin "entrada3[6]"
+    Warning (15610): No output dependent on input pin "entrada3[7]"
+    Warning (15610): No output dependent on input pin "entrada4[0]"
+    Warning (15610): No output dependent on input pin "entrada4[1]"
+    Warning (15610): No output dependent on input pin "entrada4[2]"
+    Warning (15610): No output dependent on input pin "entrada4[3]"
+    Warning (15610): No output dependent on input pin "entrada4[4]"
+    Warning (15610): No output dependent on input pin "entrada4[5]"
+    Warning (15610): No output dependent on input pin "entrada4[6]"
+    Warning (15610): No output dependent on input pin "entrada4[7]"
+    Warning (15610): No output dependent on input pin "entrada5[0]"
+    Warning (15610): No output dependent on input pin "entrada5[1]"
+    Warning (15610): No output dependent on input pin "entrada5[2]"
+    Warning (15610): No output dependent on input pin "entrada5[3]"
+    Warning (15610): No output dependent on input pin "entrada5[4]"
+    Warning (15610): No output dependent on input pin "entrada5[5]"
+    Warning (15610): No output dependent on input pin "entrada5[6]"
+    Warning (15610): No output dependent on input pin "entrada5[7]"
+    Warning (15610): No output dependent on input pin "entrada6[0]"
+    Warning (15610): No output dependent on input pin "entrada6[1]"
+    Warning (15610): No output dependent on input pin "entrada6[2]"
+    Warning (15610): No output dependent on input pin "entrada6[3]"
+    Warning (15610): No output dependent on input pin "entrada6[4]"
+    Warning (15610): No output dependent on input pin "entrada6[5]"
+    Warning (15610): No output dependent on input pin "entrada6[6]"
+    Warning (15610): No output dependent on input pin "entrada6[7]"
+    Warning (15610): No output dependent on input pin "entrada7[0]"
+    Warning (15610): No output dependent on input pin "entrada7[1]"
+    Warning (15610): No output dependent on input pin "entrada7[2]"
+    Warning (15610): No output dependent on input pin "entrada7[3]"
+    Warning (15610): No output dependent on input pin "entrada7[4]"
+    Warning (15610): No output dependent on input pin "entrada7[5]"
+    Warning (15610): No output dependent on input pin "entrada7[6]"
+    Warning (15610): No output dependent on input pin "entrada7[7]"
+    Warning (15610): No output dependent on input pin "entrada8[0]"
+    Warning (15610): No output dependent on input pin "entrada8[1]"
+    Warning (15610): No output dependent on input pin "entrada8[2]"
+    Warning (15610): No output dependent on input pin "entrada8[3]"
+    Warning (15610): No output dependent on input pin "entrada8[4]"
+    Warning (15610): No output dependent on input pin "entrada8[5]"
+    Warning (15610): No output dependent on input pin "entrada8[6]"
+    Warning (15610): No output dependent on input pin "entrada8[7]"
+    Warning (15610): No output dependent on input pin "entrada9[0]"
+    Warning (15610): No output dependent on input pin "entrada9[1]"
+    Warning (15610): No output dependent on input pin "entrada9[2]"
+    Warning (15610): No output dependent on input pin "entrada9[3]"
+    Warning (15610): No output dependent on input pin "entrada9[4]"
+    Warning (15610): No output dependent on input pin "entrada9[5]"
+    Warning (15610): No output dependent on input pin "entrada9[6]"
+    Warning (15610): No output dependent on input pin "entrada9[7]"
+    Warning (15610): No output dependent on input pin "entrada10[0]"
+    Warning (15610): No output dependent on input pin "entrada10[1]"
+    Warning (15610): No output dependent on input pin "entrada10[2]"
+    Warning (15610): No output dependent on input pin "entrada10[3]"
+    Warning (15610): No output dependent on input pin "entrada10[4]"
+    Warning (15610): No output dependent on input pin "entrada10[5]"
+    Warning (15610): No output dependent on input pin "entrada10[6]"
+    Warning (15610): No output dependent on input pin "entrada10[7]"
+    Warning (15610): No output dependent on input pin "entrada11[0]"
+    Warning (15610): No output dependent on input pin "entrada11[1]"
+    Warning (15610): No output dependent on input pin "entrada11[2]"
+    Warning (15610): No output dependent on input pin "entrada11[3]"
+    Warning (15610): No output dependent on input pin "entrada11[4]"
+    Warning (15610): No output dependent on input pin "entrada11[5]"
+    Warning (15610): No output dependent on input pin "entrada11[6]"
+    Warning (15610): No output dependent on input pin "entrada11[7]"
+    Warning (15610): No output dependent on input pin "entrada12[0]"
+    Warning (15610): No output dependent on input pin "entrada12[1]"
+    Warning (15610): No output dependent on input pin "entrada12[2]"
+    Warning (15610): No output dependent on input pin "entrada12[3]"
+    Warning (15610): No output dependent on input pin "entrada12[4]"
+    Warning (15610): No output dependent on input pin "entrada12[5]"
+    Warning (15610): No output dependent on input pin "entrada12[6]"
+    Warning (15610): No output dependent on input pin "entrada12[7]"
+    Warning (15610): No output dependent on input pin "entrada13[0]"
+    Warning (15610): No output dependent on input pin "entrada13[1]"
+    Warning (15610): No output dependent on input pin "entrada13[2]"
+    Warning (15610): No output dependent on input pin "entrada13[3]"
+    Warning (15610): No output dependent on input pin "entrada13[4]"
+    Warning (15610): No output dependent on input pin "entrada13[5]"
+    Warning (15610): No output dependent on input pin "entrada13[6]"
+    Warning (15610): No output dependent on input pin "entrada13[7]"
+    Warning (15610): No output dependent on input pin "entrada14[0]"
+    Warning (15610): No output dependent on input pin "entrada14[1]"
+    Warning (15610): No output dependent on input pin "entrada14[2]"
+    Warning (15610): No output dependent on input pin "entrada14[3]"
+    Warning (15610): No output dependent on input pin "entrada14[4]"
+    Warning (15610): No output dependent on input pin "entrada14[5]"
+    Warning (15610): No output dependent on input pin "entrada14[6]"
+    Warning (15610): No output dependent on input pin "entrada14[7]"
+    Warning (15610): No output dependent on input pin "entrada15[0]"
+    Warning (15610): No output dependent on input pin "entrada15[1]"
+    Warning (15610): No output dependent on input pin "entrada15[2]"
+    Warning (15610): No output dependent on input pin "entrada15[3]"
+    Warning (15610): No output dependent on input pin "entrada15[4]"
+    Warning (15610): No output dependent on input pin "entrada15[5]"
+    Warning (15610): No output dependent on input pin "entrada15[6]"
+    Warning (15610): No output dependent on input pin "entrada15[7]"
+    Warning (15610): No output dependent on input pin "entrada16[0]"
+    Warning (15610): No output dependent on input pin "entrada16[1]"
+    Warning (15610): No output dependent on input pin "entrada16[2]"
+    Warning (15610): No output dependent on input pin "entrada16[3]"
+    Warning (15610): No output dependent on input pin "entrada16[4]"
+    Warning (15610): No output dependent on input pin "entrada16[5]"
+    Warning (15610): No output dependent on input pin "entrada16[6]"
+    Warning (15610): No output dependent on input pin "entrada16[7]"
+Info (21057): Implemented 385 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 257 input pins
+    Info (21059): Implemented 128 output pins
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 148 warnings
+    Info: Peak virtual memory: 404 megabytes
+    Info: Processing ended: Thu Nov 21 14:36:28 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+
