@@ -7,9 +7,9 @@ entity round is
 		DATA_WIDTH : natural := 8
 	);
 
-	port 
+	port
 	(
-	-- Portas principais 
+	-- Portas principais
 		clk		  : in std_logic;
 		entrada1   : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		entrada2   : in std_logic_vector((DATA_WIDTH-1) downto 0);
@@ -26,18 +26,50 @@ entity round is
 		entrada13   : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		entrada14   : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		entrada15   : in std_logic_vector((DATA_WIDTH-1) downto 0);
-		entrada16   : in std_logic_vector((DATA_WIDTH-1) downto 0)
+		entrada16   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida1   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida2   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida3   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida4   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida5   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida6	  : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida7   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida8   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida9   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida10   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida11   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida12   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida13   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida14   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida15   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		saida16   : out std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave1   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave2   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave3   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave4   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave5   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave6	  : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave7   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave8   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave9   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave10   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave11   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave12   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave13   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave14   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave15   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave16   : in std_logic_vector((DATA_WIDTH-1) downto 0)
 	);
 end entity;
 
 architecture rtl of round is
 signal enableR : std_logic;
-signal selMemoria : std_logic_vector  (3 downto 0);
-signal eMemoria, sMemoria, entrada : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal regA1, regA2, regA3, regA4, regA5, regA6, regA7, regA8, regA9, regA10, regA11, regA12, regA13, regA14, regA15, regA16 : std_logic_vector((DATA_WIDTH-1) downto 0);
-signal regSub1, regSub2, regSub3, regSub4, regSub5, regSub6, regSub7, regSub8, regSub9, regSub10, regSub11, regSub12, regSub13, regSub14, regSub15, regSub16 : std_logic_vector((DATA_WIDTH-1) downto 0);
+signal sSub1, sSub2, sSub3, sSub4, sSub5, sSub6, sSub7, sSub8, sSub9, sSub10, sSub11, sSub12, sSub13, sSub14, sSub15, sSub16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal regSh1, regSh2, regSh3, regSh4, regSh5, regSh6, regSh7, regSh8, regSh9, regSh10, regSh11, regSh12, regSh13, regSh14, regSh15, regSh16 : std_logic_vector((DATA_WIDTH-1) downto 0);
+signal sSh1, sSh2, sSh3, sSh4, sSh5, sSh6, sSh7, sSh8, sSh9, sSh10, sSh11, sSh12, sSh13, sSh14, sSh15, sSh16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal regM1, regM2, regM3, regM4, regM5, regM6, regM7, regM8, regM9, regM10, regM11, regM12, regM13, regM14, regM15, regM16 : std_logic_vector((DATA_WIDTH-1) downto 0);
+signal sM1, sM2, sM3, sM4, sM5, sM6, sM7, sM8, sM9, sM10, sM11, sM12, sM13, sM14, sM15, sM16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 
 component registerNbits is
 	generic
@@ -45,43 +77,12 @@ component registerNbits is
 		DATA_WIDTH : natural := 8
 	);
 
-	port 
+	port
 	(
-		clk		: in std_logic;
+		clock		: in std_logic;
 		enable	: in std_logic;
 		d	      : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		q			: out std_logic_vector((DATA_WIDTH-1) downto 0)
-	);
-
-end component;
-
-component mux16 is
-
-	generic
-	(
-		DATA_WIDTH : natural := 8
-	);
-
-	port 
-	(
-		e1	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e2	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e3	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e4	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e5	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e6	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e7	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e8	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e9	   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e10	: in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e11   : in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e12	: in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e13	: in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e14	: in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e15	: in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		e16	: in std_logic_vector  ((DATA_WIDTH-1) downto 0);
-		sel   : in std_logic_vector  (3 downto 0);
-		result : out std_logic_vector ((DATA_WIDTH-1) downto 0)
 	);
 
 end component;
@@ -92,7 +93,7 @@ component addRoundKey is
 		DATA_WIDTH : natural := 8
 	);
 
-	port 
+	port
 	(
 		clock		  : in std_logic;
 		chave      : in std_logic_vector ((DATA_WIDTH-1) downto 0);
@@ -104,9 +105,39 @@ end component;
 component subBytes is
 	port (
 	 clock    : std_logic;
-    address  : in std_logic_Vector(7 downto 0);
-    data     : out std_logic_Vector(7 downto 0)
-    );
+    address1  : in std_logic_Vector(7 downto 0);
+	 address2  : in std_logic_Vector(7 downto 0);
+	 address3  : in std_logic_Vector(7 downto 0);
+	 address4  : in std_logic_Vector(7 downto 0);
+	 address5  : in std_logic_Vector(7 downto 0);
+	 address6  : in std_logic_Vector(7 downto 0);
+	 address7  : in std_logic_Vector(7 downto 0);
+	 address8  : in std_logic_Vector(7 downto 0);
+	 address9  : in std_logic_Vector(7 downto 0);
+	 address10  : in std_logic_Vector(7 downto 0);
+	 address11  : in std_logic_Vector(7 downto 0);
+	 address12  : in std_logic_Vector(7 downto 0);
+	 address13  : in std_logic_Vector(7 downto 0);
+	 address14  : in std_logic_Vector(7 downto 0);
+	 address15  : in std_logic_Vector(7 downto 0);
+	 address16  : in std_logic_Vector(7 downto 0);
+    saida1     : out std_logic_Vector(7 downto 0);
+	 saida2     : out std_logic_Vector(7 downto 0);
+	 saida3     : out std_logic_Vector(7 downto 0);
+	 saida4     : out std_logic_Vector(7 downto 0);
+	 saida5     : out std_logic_Vector(7 downto 0);
+	 saida6     : out std_logic_Vector(7 downto 0);
+	 saida7     : out std_logic_Vector(7 downto 0);
+	 saida8     : out std_logic_Vector(7 downto 0);
+	 saida9     : out std_logic_Vector(7 downto 0);
+	 saida10     : out std_logic_Vector(7 downto 0);
+	 saida11     : out std_logic_Vector(7 downto 0);
+	 saida12     : out std_logic_Vector(7 downto 0);
+	 saida13     : out std_logic_Vector(7 downto 0);
+	 saida14     : out std_logic_Vector(7 downto 0);
+	 saida15     : out std_logic_Vector(7 downto 0);
+	 saida16     : out std_logic_Vector(7 downto 0)
+   );
 end component;
 
 
@@ -116,7 +147,7 @@ component mixColumns is
 		DATA_WIDTH : natural := 8
 	);
 
-	port 
+	port
 	(
 		clock		  : in std_logic;
 		entrada1    : in std_logic_vector ((DATA_WIDTH-1) downto 0);
@@ -135,7 +166,7 @@ component shiftRows2 is
 	(
 		DATA_WIDTH : natural := 8
 	);
-	port 
+	port
 	(
 		clock		  : in std_logic;
 		entrada1    : in std_logic_vector ((DATA_WIDTH-1) downto 0);
@@ -154,7 +185,7 @@ component shiftRows3 is
 	(
 		DATA_WIDTH : natural := 8
 	);
-	port 
+	port
 	(
 		clock		  : in std_logic;
 		entrada1    : in std_logic_vector ((DATA_WIDTH-1) downto 0);
@@ -173,7 +204,7 @@ component shiftRows4 is
 	(
 		DATA_WIDTH : natural := 8
 	);
-	port 
+	port
 	(
 		clock		  : in std_logic;
 		entrada1    : in std_logic_vector ((DATA_WIDTH-1) downto 0);
@@ -189,288 +220,296 @@ end component;
 
 begin
 
---reg1: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub1, q => regSub1);
---	
---reg2: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub2, q => regSub2);	
---	
---reg3: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub3, q => regSub3);
---	
---reg4: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub4, q => regSub4);	
---	
---reg5: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub5, q => regSub5);
---	
---reg6: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub6, q => regSub6);	
---	
---reg7: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub7, q => regSub7);
---	
---reg8: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub8, q => regSub8);	
---	
---reg9: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub9, q => regSub9);
---	
---reg10: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub10, q => regSub10);	
---	
---reg11: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub11, q => regSub11);
---	
---reg12: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub12, q => regSub12);	
---	
---reg13: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub13, q => regSub13);
---	
---reg14: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub14, q => regSub14);	
---	
---reg15: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub15, q => regSub15);
---	
---reg16: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub16, q => regSub16);	
---	
---	
---reg17: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub1, q => regSh1);
---	
---reg18: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub2, q => regSh2);	
---	
---reg19: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub3, q => regSh3);
---	
---reg20: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub4, q => regSh4);	
---	
---reg21: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub5, q => regSh5);
---	
---reg22: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub6, q => regSh6);	
---	
---reg23: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub7, q => regSh7);
---	
---reg24: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub8, q => regSh8);	
---	
---reg25: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub9, q => regSh9);
---	
---reg26: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub10, q => regSh10);	
---	
---reg27: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub11, q => regSh11);
---	
---reg28: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub12, q => regSh12);	
---	
---reg29: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub13, q => regSh13);
---	
---reg30: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub14, q => regSh14);	
---	
---reg31: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub15, q => regSh15);
---	
---reg32: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSub16, q => regSh16);		
---	
---
---	
---reg33: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh1, q => regM1);
---	
---reg34: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh2, q => regM2);	
---	
---reg35: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh3, q => regM3);
---	
---reg36: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh4, q => regM4);	
---	
---reg37: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh5, q => regM5);
---	
---reg38: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh6, q => regM6);	
---	
---reg39: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh7, q => regM7);
---	
---reg40: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh8, q => regM8);	
---	
---reg41: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh9, q => regM9);
---	
---reg42: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh10, q => regM10);	
---	
---reg43: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh11, q => regM11);
---	
---reg44: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh12, q => regM12);	
---	
---reg45: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh13, q => regM13);
---	
---reg46: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh14, q => regM14);	
---	
---reg47: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh15, q => regM15);
---	
---reg48: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regSh16, q => regM16);	
---
---	
---	
---reg49: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM1, q => regA1);
---	
---reg50: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM2, q => regA2);	
---	
---reg51: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM3, q => regA3);
---	
---reg52: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM4, q => regA4);	
---	
---reg53: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM5, q => regA5);
---	
---reg54: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM6, q => regA6);	
---	
---reg55: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM7, q => regA7);
---	
---reg56: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM8, q => regA8);	
---	
---reg57: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM9, q => regA9);
---	
---reg58: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM10, q => regA10);	
---	
---reg59: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM11, q => regA11);
---	
---reg60: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM12, q => regA12);	
---	
---reg61: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM13, q => regA13);
---	
---reg62: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM14, q => regA14);	
---	
---reg63: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM15, q => regA15);
---	
---reg64: registerNbits
---	generic map (DATA_WIDTH => DATA_WIDTH)
---	port map (clk => clk, enable => enableR, d => regM16, q => regA16);	
-	
+r1: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub1, q => regSh1);
+
+r2: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub2, q => regSh2);
+
+r3: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub3, q => regSh3);
+
+r4: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub4, q => regSh4);
+
+r5: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub5, q => regSh5);
+
+r6: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub6, q => regSh6);
+
+r7: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub7, q => regSh7);
+
+r8: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub8, q => regSh8);
+
+r9: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub9, q => regSh9);
+
+r10: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub10, q => regSh10);
+
+r11: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub11, q => regSh11);
+
+r12: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub12, q => regSh12);
+
+r13: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub13, q => regSh13);
+
+r14: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub14, q => regSh14);
+
+r15: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub15, q => regSh15);
+
+r16: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSub16, q => regSh16);
+
+
+
+r17 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => regSh1, q => regM1);
+
+r18 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => regSh2, q => regM2);
+
+r19 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => regSh3, q => regM3);
+
+r20 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => regSh4, q => regM4);
+
+
+r21 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh5, q => regM5);
+
+r22 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh6, q => regM6);
+
+r23 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh7, q => regM7);
+
+r24 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh8, q => regM8);
+
+r25 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh9, q => regM9);
+
+r26 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh10, q => regM10);
+
+r27 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh11, q => regM11);
+
+r28 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh12, q => regM12);
+
+r29 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh13, q => regM13);
+
+r30 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh14, q => regM14);
+
+r31 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh15, q => regM15);
+
+r32 :	registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sSh16, q => regM16);
+
+r33: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM1, q => regA1);
+
+r34: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM2, q => regA2);
+
+r35: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM3, q => regA3);
+
+r36: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM4, q => regA4);
+
+r37: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM5, q => regA5);
+
+r38: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM6, q => regA6);
+
+r39: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM7, q => regA7);
+
+r40: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM8, q => regA8);
+
+r41: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM9, q => regA9);
+
+r42: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM10, q => regA10);
+
+r43: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM11, q => regA11);
+
+r44: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM12, q => regA12);
+
+r45: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM13, q => regA13);
+
+r46: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM14, q => regA14);
+
+r47: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM15, q => regA15);
+
+r48: registerNbits
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => sM16, q => regA16);
+
+
+
+rom : subBytes
+	port map (clock => clk, address1 => entrada1, address2 => entrada2, address3 => entrada3, address4 => entrada4, address5 => entrada5, address6 => entrada6, address7 => entrada7, address8 => entrada8, address9 => entrada9, address10 => entrada10, address11 => entrada11, address12 => entrada12, address13 => entrada13, address14 => entrada14, address15 => entrada15, address16 => entrada16, saida1 => sSub1, saida2 => sSub2, saida3 => sSub3, saida4 => sSub4, saida5 => sSub5, saida6 => sSub6, saida7 => sSub7, saida8 => sSub8, saida9 => sSub9, saida10 => sSub10, saida11 => sSub11, saida12 => sSub12, saida13 => sSub13, saida14 => sSub14, saida15 => sSub15, saida16 => sSub16);
+
 sR2 : shiftRows2
 	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, entrada1 => regSub5, entrada2 => regSub6, entrada3 => regSub7, entrada4=> regSub8, saida1 => regSh5, saida2 => regSh6, saida3 => regSh7, saida4 => regSh8);	
+	port map (clock => clk, entrada1 => regSh5, entrada2 => regSh6, entrada3 => regSh7, entrada4=> regSh8, saida1 => sSh5, saida2 => sSh6, saida3 => sSh7, saida4 => sSh8);
 
 sR3 : shiftRows3
 	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, entrada1 => regSub9, entrada2 => regSub10, entrada3 => regSub11, entrada4=> regSub12, saida1 => regSh9, saida2 => regSh10, saida3 => regSh11, saida4 => regSh12);		
-	
+	port map (clock => clk, entrada1 => regSh9, entrada2 => regSh10, entrada3 => regSh11, entrada4=> regSh12, saida1 => sSh9, saida2 => sSh10, saida3 => sSh11, saida4 => sSh12);
+
 sR4 : shiftRows4
 	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, entrada1 => regSub13, entrada2 => regSub14, entrada3 => regSub15, entrada4=> regSub16, saida1 => regSh13, saida2 => regSh14, saida3 => regSh15, saida4 => regSh16);			
+	port map (clock => clk, entrada1 => regSh13, entrada2 => regSh14, entrada3 => regSh15, entrada4=> regSh16, saida1 => sSh13, saida2 => sSh14, saida3 => sSh15, saida4 => sSh16);
 
-rom : subBytes	
-	port map (clock => clk, address => eMemoria, data => sMemoria);		
+mc1 : mixColumns
+   generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, entrada1 => regM1, entrada2 => regM5, entrada3 => regM9, entrada4 => regM13, saida1 => sM1, saida2 => sM5, saida3 => sM9, saida4 => sM13);
 
-muxMemoria : mux16
-	generic map (DATA_WIDTH => DATA_WIDTH)
-   port map (e1 => entrada1, e2 => entrada2, e3 => entrada3, e4 => entrada4, e5 => entrada5, e6 => entrada6, e7 => entrada7, e8 => entrada8, e9 => entrada9, e10 => entrada10, e11 => entrada11, e12 => entrada12, e13 => entrada13, e14 => entrada14, e15 => entrada15, e16 => entrada16, sel => selMemoria, result => eMemoria);
- 	
-entrada : registerNbits
-	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (clk => clk, enable => enableR, d => selMemoria, q => entrada);
- --qual das entradas foi pra memoria
+mc2 : mixColumns
+   generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, entrada1 => regM2, entrada2 => regM6, entrada3 => regM10, entrada4 => regM14, saida1 => sM2, saida2 => sM6, saida3 => sM10, saida4 => sM14);
+
+mc3 : mixColumns
+   generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, entrada1 => regM3, entrada2 => regM7, entrada3 => regM11, entrada4 => regM15, saida1 => sM3, saida2 => sM7, saida3 => sM11, saida4 => sM15);
+
+mc4 : mixColumns
+   generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, entrada1 => regM4, entrada2 => regM8, entrada3 => regM12, entrada4 => regM16, saida1 => sM4, saida2 => sM8, saida3 => sM12, saida4 => sM16);
+
+adK1 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave1, entrada => regA1, saida => saida1);
+
+adK2 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave2, entrada => regA2, saida => saida2);
+
+adK3 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave3, entrada => regA3, saida => saida3);
+
+adK4 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave4, entrada => regA4,	saida => saida4);
+
+adK5 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave5, entrada => regA5 , saida => saida5);
+
+adK6 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave6, entrada => regA6, saida => saida6);
+
+adK7 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave7, entrada => regA7, saida => saida7);
+
+adK8 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave8, entrada => regA8, saida => saida8);
+
+adK9 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave9, entrada => regA9, saida => saida9);
+
+adK10 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave10, entrada => regA10, saida => saida10);
+
+adK11 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave11, entrada => regA11, saida => saida11);
+
+adK12 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave12, entrada => regA12, saida => saida12);
+
+adK13 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave13, entrada => regA13, saida => saida13);
+
+adK14 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave14, entrada => regA14, saida => saida14);
+
+adK15 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave15, entrada => regA15, saida => saida15);
+
+adK16 : addRoundKey
+	generic map	(DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, chave => chave16, entrada => regA16, saida => saida16);
+
 end rtl;

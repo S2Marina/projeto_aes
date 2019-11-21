@@ -13,10 +13,10 @@
 -- applicable agreement for further details.
 
 -- VENDOR "Altera"
--- PROGRAM "Quartus II 64-Bit"
+-- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "10/28/2019 15:42:51"
+-- DATE "11/21/2019 00:01:14"
 
 -- 
 -- Device: Altera EP3C25F324C6 Package FBGA324

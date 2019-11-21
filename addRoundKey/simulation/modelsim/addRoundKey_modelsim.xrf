@@ -1,6 +1,6 @@
 vendor_name = ModelSim
-source_file = 1, /home/marina/Documentos/quartus/projeto/addRoundKey/addRoundKey.vhd
-source_file = 1, /home/marina/Documentos/quartus/projeto/addRoundKey/db/addRoundKey.cbx.xml
+source_file = 1, /home/marina/Documentos/projeto_aes/addRoundKey/addRoundKey.vhd
+source_file = 1, /home/marina/Documentos/projeto_aes/addRoundKey/db/addRoundKey.cbx.xml
 source_file = 1, /home/marina/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/marina/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /home/marina/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd

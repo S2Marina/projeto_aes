@@ -1,6 +1,6 @@
 EDA Netlist Writer report for addRoundKey
-Mon Oct 28 15:42:51 2019
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Thu Nov 21 00:01:14 2019
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Oct 28 15:42:51 2019 ;
+; EDA Netlist Writer Status ; Successful - Thu Nov 21 00:01:14 2019 ;
 ; Revision Name             ; addRoundKey                           ;
 ; Top-level Entity Name     ; addRoundKey                           ;
 ; Family                    ; Cyclone III                           ;
@@ -66,41 +66,41 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                     ;
-+----------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                ;
-+----------------------------------------------------------------------------------------------------------------+
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_85c_slow.vho      ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_0c_slow.vho       ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_min_1200mv_0c_fast.vho     ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey.vho                        ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_85c_vhd_slow.sdo  ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_0c_vhd_slow.sdo   ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_min_1200mv_0c_vhd_fast.sdo ;
-; /home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/addRoundKey_vhd.sdo                    ;
-+----------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                 ;
++------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                            ;
++------------------------------------------------------------------------------------------------------------+
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_85c_slow.vho      ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_0c_slow.vho       ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_min_1200mv_0c_fast.vho     ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey.vho                        ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_85c_vhd_slow.sdo  ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_6_1200mv_0c_vhd_slow.sdo   ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_min_1200mv_0c_vhd_fast.sdo ;
+; /home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/addRoundKey_vhd.sdo                    ;
++------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
+Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Oct 28 15:42:50 2019
+    Info: Processing started: Thu Nov 21 00:01:13 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off addRoundKey -c addRoundKey
-Info (204019): Generated file addRoundKey_6_1200mv_85c_slow.vho in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey_6_1200mv_0c_slow.vho in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey_min_1200mv_0c_fast.vho in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey.vho in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey_6_1200mv_85c_vhd_slow.sdo in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey_6_1200mv_0c_vhd_slow.sdo in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey_min_1200mv_0c_vhd_fast.sdo in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file addRoundKey_vhd.sdo in folder "/home/marina/Documentos/quartus/projeto/addRoundKey/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 856 megabytes
-    Info: Processing ended: Mon Oct 28 15:42:51 2019
+Info (204019): Generated file addRoundKey_6_1200mv_85c_slow.vho in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey_6_1200mv_0c_slow.vho in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey_min_1200mv_0c_fast.vho in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey.vho in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey_6_1200mv_85c_vhd_slow.sdo in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey_6_1200mv_0c_vhd_slow.sdo in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey_min_1200mv_0c_vhd_fast.sdo in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file addRoundKey_vhd.sdo in folder "/home/marina/Documentos/projeto_aes/addRoundKey/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 339 megabytes
+    Info: Processing ended: Thu Nov 21 00:01:14 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
