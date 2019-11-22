@@ -73,6 +73,8 @@ signal sMux1, sMux2, sMux3, sMux4, sMux5, sMux6, sMux7, sMux8, sMux9, sMux10, sM
 signal regE1, regE2, regE3, regE4, regE5, regE6, regE7, regE8, regE9, regE10, regE11, regE12, regE13, regE14, regE15, regE16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal regR1, regR2, regR3, regR4, regR5, regR6, regR7, regR8, regR9, regR10, regR11, regR12, regR13, regR14, regR15, regR16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16 : std_logic_vector((DATA_WIDTH-1) downto 0);
+signal regChave1, regChave2, regChave3, regChave4, regChave5, regChave6, regChave7, regChave8, regChave9, regChave10, regChave11, regChave12, regChave13, regChave14, regChave15, regChave16 : std_logic_vector((DATA_WIDTH-1) downto 0);
+
 
 component registerNbits is
 	generic
@@ -570,12 +572,8 @@ last_roundAes : last_round
 	generic map (DATA_WIDTH => DATA_WIDTH)
 	port map (clk => clk, entrada1 => regR1, entrada2 => regR2, entrada3 => regR3, entrada4 => regR4, entrada5 => regR5, entrada6 => regR6, entrada7 => regR7, entrada8 => regR8, entrada9 => regR9, entrada10 => regR10, entrada11 => regR11, entrada12 => regR12, entrada13 => regR13, entrada14 => regR14, entrada15 => regR15, entrada16 => regR16, chave1 => chave1, chave2 => chave2, chave3 => chave3, chave4 => chave4, chave5 => chave5, chave6 => chave6, chave7 => chave7, chave8 => chave8, chave9 => chave9, chave10 => chave10, chave11 => chave11, chave12 => chave12, chave13 => chave13, chave14 => chave14, chave15 => chave15, chave16 => chave16, saida1 => saida1, saida2 => saida2, saida3 => saida3, saida4 => saida4, saida5 => saida5, saida6 => saida6, saida7 => saida7, saida8 => saida8, saida9 => saida9, saida10 => saida10, saida11 => saida11, saida12 => saida12, saida13 => saida13, saida14 => saida14, saida15 => saida15, saida16 => saida16);	
 	
-muxChave : mux16_1	
-	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (sel => selMuxKey, e1 => k1, e2 => k2, e3 => k3, e4 => k4, e5 => k5, e6 => k6, e7 => k7,)
-	
 chaves : key
 	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (cont => cont, k1 => )
+	port map (cont => cont, k1 => k1, k2 => k2, k3 => k3, k4 => k4, k5 => k5, k6 => k6, k7 => k7, k8 => k8, k9 => k9, k10 => k10, k11 => k11, k12 => k12, k13 => k13, k14 => k14, k15 => k15, k16 => k16);
 	
 end rtl;
