@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/22/2019 15:21:29"
+-- DATE "11/22/2019 15:56:36"
 
 -- 
 -- Device: Altera EP3C40F780I7 Package FBGA780
@@ -69,22 +69,22 @@ ENTITY 	aes IS
 	entrada14 : IN std_logic_vector(7 DOWNTO 0);
 	entrada15 : IN std_logic_vector(7 DOWNTO 0);
 	entrada16 : IN std_logic_vector(7 DOWNTO 0);
-	saida1 : OUT std_logic_vector(7 DOWNTO 0);
-	saida2 : OUT std_logic_vector(7 DOWNTO 0);
-	saida3 : OUT std_logic_vector(7 DOWNTO 0);
-	saida4 : OUT std_logic_vector(7 DOWNTO 0);
-	saida5 : OUT std_logic_vector(7 DOWNTO 0);
-	saida6 : OUT std_logic_vector(7 DOWNTO 0);
-	saida7 : OUT std_logic_vector(7 DOWNTO 0);
-	saida8 : OUT std_logic_vector(7 DOWNTO 0);
-	saida9 : OUT std_logic_vector(7 DOWNTO 0);
-	saida10 : OUT std_logic_vector(7 DOWNTO 0);
-	saida11 : OUT std_logic_vector(7 DOWNTO 0);
-	saida12 : OUT std_logic_vector(7 DOWNTO 0);
-	saida13 : OUT std_logic_vector(7 DOWNTO 0);
-	saida14 : OUT std_logic_vector(7 DOWNTO 0);
-	saida15 : OUT std_logic_vector(7 DOWNTO 0);
-	saida16 : OUT std_logic_vector(7 DOWNTO 0)
+	saida1 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida2 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida3 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida4 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida5 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida6 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida7 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida8 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida9 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida10 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida11 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida12 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida13 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida14 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida15 : BUFFER std_logic_vector(7 DOWNTO 0);
+	saida16 : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END aes;
 
@@ -1577,68 +1577,26 @@ SIGNAL \po|roundAes|mc1|saida4[3]~5_combout\ : std_logic;
 SIGNAL \po|roundAes|mc1|saida4[4]~6_combout\ : std_logic;
 SIGNAL \po|roundAes|mc2|saida4[3]~5_combout\ : std_logic;
 SIGNAL \po|roundAes|mc2|saida4[4]~6_combout\ : std_logic;
-SIGNAL \po|r2|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r10|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|adK2|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|adK10|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r18|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r26|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|r34|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r16|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r24|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r32|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r40|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r48|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|mc3|saida1\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|mc1|saida1\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|chaves|k3\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|chaves|k10\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \c|cnt\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \po|last_roundAes|r48|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|adK8|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|adK16|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|rChave8|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|rChave16|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r5|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r9|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|mc4|saida4\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|adK1|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|adK5|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|adK9|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|adK13|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r17|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r21|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r25|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r29|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|r33|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|r37|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|r41|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|r11|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r15|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r19|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r23|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r27|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r31|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r35|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r39|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|r43|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r47|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|roundAes|mc2|saida2\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|mc3|saida2\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|mc1|saida2\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|chaves|k8\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|chaves|k4\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|chaves|k15\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|chaves|k11\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|r43|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|r47|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|adK3|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|adK7|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|last_roundAes|adK11|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|adK15|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|rChave3|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave7|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \po|rChave11|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave15|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r4|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r8|q\ : std_logic_vector(7 DOWNTO 0);
@@ -1681,6 +1639,7 @@ SIGNAL \po|rChave10|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave14|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r3|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r7|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r11|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|mc4|saida2\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|adK3|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|adK7|saida\ : std_logic_vector(7 DOWNTO 0);
@@ -1717,29 +1676,70 @@ SIGNAL \po|rChave1|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave5|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave9|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave13|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r2|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r6|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r10|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|mc4|saida3\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|adK2|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|adK6|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|adK10|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|adK14|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r18|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r22|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r26|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r30|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|r34|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|r38|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r12|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r16|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r20|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r24|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r28|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r32|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r36|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r40|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|r44|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r48|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|roundAes|mc2|saida1\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|mc3|saida1\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|r1|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|mc1|saida1\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|chaves|k7\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|chaves|k3\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|chaves|k14\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|chaves|k10\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \c|cnt\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \po|last_roundAes|r44|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|r48|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|adK4|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|adK8|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|last_roundAes|adK12|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|adK16|saida\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave4|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|rChave8|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \po|rChave12|q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \pc|ALT_INV_state.s0~q\ : std_logic;
+SIGNAL \po|rChave16|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r5|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|mc4|saida4\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|adK5|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|adK13|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r21|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|r29|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|r37|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r19|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r27|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r35|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|r43|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|roundAes|mc2|saida2\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|chaves|k8\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|chaves|k15\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|r43|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|adK3|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|last_roundAes|adK11|saida\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|rChave3|q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \po|rChave11|q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \ALT_INV_reset~inputclkctrl_outclk\ : std_logic;
+SIGNAL \pc|ALT_INV_state.s0~q\ : std_logic;
 
 BEGIN
 
@@ -2152,8 +2152,8 @@ ww_devpor <= devpor;
 \clock~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clock~input_o\);
 
 \reset~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \reset~input_o\);
-\pc|ALT_INV_state.s0~q\ <= NOT \pc|state.s0~q\;
 \ALT_INV_reset~inputclkctrl_outclk\ <= NOT \reset~inputclkctrl_outclk\;
+\pc|ALT_INV_state.s0~q\ <= NOT \pc|state.s0~q\;
 
 -- Location: IOOBUF_X14_Y0_N9
 \saida1[0]~output\ : cycloneiii_io_obuf
