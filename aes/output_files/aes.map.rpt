@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aes
-Fri Nov 22 04:03:37 2019
+Fri Nov 22 15:20:33 2019
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -337,16 +337,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 22 04:03:37 2019      ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 22 15:20:33 2019      ;
 ; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; aes                                        ;
 ; Top-level Entity Name              ; aes                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 1,356                                      ;
-;     Total combinational functions  ; 1,037                                      ;
+; Total logic elements               ; 1,343                                      ;
+;     Total combinational functions  ; 1,084                                      ;
 ;     Dedicated logic registers      ; 779                                        ;
 ; Total registers                    ; 779                                        ;
-; Total pins                         ; 130                                        ;
+; Total pins                         ; 386                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 65,536                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -359,7 +359,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C25F324C6       ;                    ;
+; Device                                                                     ; EP3C40F780I7       ;                    ;
 ; Top-level entity name                                                      ; aes                ; aes                ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -521,29 +521,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 1,356       ;
+; Estimated Total logic elements              ; 1,343       ;
 ;                                             ;             ;
-; Total combinational functions               ; 1037        ;
+; Total combinational functions               ; 1084        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 333         ;
-;     -- 3 input functions                    ; 222         ;
-;     -- <=2 input functions                  ; 482         ;
+;     -- 4 input functions                    ; 323         ;
+;     -- 3 input functions                    ; 360         ;
+;     -- <=2 input functions                  ; 401         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 1037        ;
+;     -- normal mode                          ; 1084        ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 779         ;
 ;     -- Dedicated logic registers            ; 779         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 130         ;
+; I/O pins                                    ; 386         ;
 ; Total memory bits                           ; 65536       ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 1035        ;
-; Total fan-out                               ; 8048        ;
-; Average fan-out                             ; 3.45        ;
+; Total fan-out                               ; 8584        ;
+; Average fan-out                             ; 2.97        ;
 +---------------------------------------------+-------------+
 
 
@@ -552,10 +552,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |aes                                            ; 1037 (0)          ; 779 (0)      ; 65536       ; 0            ; 0       ; 0         ; 130  ; 0            ; |aes                                                                                                       ; work         ;
+; |aes                                            ; 1084 (0)          ; 779 (0)      ; 65536       ; 0            ; 0       ; 0         ; 386  ; 0            ; |aes                                                                                                       ; work         ;
 ;    |contador:c|                                 ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|contador:c                                                                                            ; work         ;
 ;    |pc_aes:pc|                                  ; 6 (6)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|pc_aes:pc                                                                                             ; work         ;
-;    |po_aes:po|                                  ; 1026 (0)          ; 768 (0)      ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po                                                                                             ; work         ;
+;    |po_aes:po|                                  ; 1073 (0)          ; 768 (0)      ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po                                                                                             ; work         ;
 ;       |key:chaves|                              ; 373 (373)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|key:chaves                                                                                  ; work         ;
 ;       |last_round:last_roundAes|                ; 128 (0)           ; 128 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|last_round:last_roundAes                                                                    ; work         ;
 ;          |addRoundKey:adK10|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|last_round:last_roundAes|addRoundKey:adK10                                                  ; work         ;
@@ -623,6 +623,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |altsyncram_3b71:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|last_round:last_roundAes|subBytes:rom|altsyncram:Ram8_rtl_0|altsyncram_3b71:auto_generated  ; work         ;
 ;             |altsyncram:Ram9_rtl_0|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|last_round:last_roundAes|subBytes:rom|altsyncram:Ram9_rtl_0                                 ; work         ;
 ;                |altsyncram_4b71:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|last_round:last_roundAes|subBytes:rom|altsyncram:Ram9_rtl_0|altsyncram_4b71:auto_generated  ; work         ;
+;       |mux2_1:mux10|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux10                                                                                ; work         ;
+;       |mux2_1:mux11|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux11                                                                                ; work         ;
+;       |mux2_1:mux12|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux12                                                                                ; work         ;
+;       |mux2_1:mux13|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux13                                                                                ; work         ;
+;       |mux2_1:mux14|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux14                                                                                ; work         ;
+;       |mux2_1:mux15|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux15                                                                                ; work         ;
+;       |mux2_1:mux16|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux16                                                                                ; work         ;
+;       |mux2_1:mux1|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux1                                                                                 ; work         ;
+;       |mux2_1:mux2|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux2                                                                                 ; work         ;
+;       |mux2_1:mux3|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux3                                                                                 ; work         ;
+;       |mux2_1:mux4|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux4                                                                                 ; work         ;
+;       |mux2_1:mux5|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux5                                                                                 ; work         ;
+;       |mux2_1:mux6|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux6                                                                                 ; work         ;
+;       |mux2_1:mux7|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux7                                                                                 ; work         ;
+;       |mux2_1:mux8|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux8                                                                                 ; work         ;
+;       |mux2_1:mux9|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:mux9                                                                                 ; work         ;
 ;       |mux2_1:muxChave10|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:muxChave10                                                                           ; work         ;
 ;       |mux2_1:muxChave11|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:muxChave11                                                                           ; work         ;
 ;       |mux2_1:muxChave12|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:muxChave12                                                                           ; work         ;
@@ -639,17 +655,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |mux2_1:muxChave7|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:muxChave7                                                                            ; work         ;
 ;       |mux2_1:muxChave8|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:muxChave8                                                                            ; work         ;
 ;       |mux2_1:muxChave9|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|mux2_1:muxChave9                                                                            ; work         ;
-;       |registerNbits:r10|                       ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r10                                                                           ; work         ;
-;       |registerNbits:r11|                       ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r11                                                                           ; work         ;
-;       |registerNbits:r12|                       ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r12                                                                           ; work         ;
-;       |registerNbits:r13|                       ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r13                                                                           ; work         ;
-;       |registerNbits:r14|                       ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r14                                                                           ; work         ;
-;       |registerNbits:r15|                       ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r15                                                                           ; work         ;
-;       |registerNbits:r16|                       ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r16                                                                           ; work         ;
+;       |registerNbits:r10|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r10                                                                           ; work         ;
+;       |registerNbits:r11|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r11                                                                           ; work         ;
+;       |registerNbits:r12|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r12                                                                           ; work         ;
+;       |registerNbits:r13|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r13                                                                           ; work         ;
+;       |registerNbits:r14|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r14                                                                           ; work         ;
+;       |registerNbits:r15|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r15                                                                           ; work         ;
+;       |registerNbits:r16|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r16                                                                           ; work         ;
 ;       |registerNbits:r17|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r17                                                                           ; work         ;
 ;       |registerNbits:r18|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r18                                                                           ; work         ;
 ;       |registerNbits:r19|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r19                                                                           ; work         ;
-;       |registerNbits:r1|                        ; 5 (5)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r1                                                                            ; work         ;
+;       |registerNbits:r1|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r1                                                                            ; work         ;
 ;       |registerNbits:r20|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r20                                                                           ; work         ;
 ;       |registerNbits:r21|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r21                                                                           ; work         ;
 ;       |registerNbits:r22|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r22                                                                           ; work         ;
@@ -660,17 +676,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |registerNbits:r27|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r27                                                                           ; work         ;
 ;       |registerNbits:r28|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r28                                                                           ; work         ;
 ;       |registerNbits:r29|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r29                                                                           ; work         ;
-;       |registerNbits:r2|                        ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r2                                                                            ; work         ;
+;       |registerNbits:r2|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r2                                                                            ; work         ;
 ;       |registerNbits:r30|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r30                                                                           ; work         ;
 ;       |registerNbits:r31|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r31                                                                           ; work         ;
 ;       |registerNbits:r32|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r32                                                                           ; work         ;
-;       |registerNbits:r3|                        ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r3                                                                            ; work         ;
-;       |registerNbits:r4|                        ; 5 (5)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r4                                                                            ; work         ;
-;       |registerNbits:r5|                        ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r5                                                                            ; work         ;
-;       |registerNbits:r6|                        ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r6                                                                            ; work         ;
-;       |registerNbits:r7|                        ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r7                                                                            ; work         ;
-;       |registerNbits:r8|                        ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r8                                                                            ; work         ;
-;       |registerNbits:r9|                        ; 5 (5)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r9                                                                            ; work         ;
+;       |registerNbits:r3|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r3                                                                            ; work         ;
+;       |registerNbits:r4|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r4                                                                            ; work         ;
+;       |registerNbits:r5|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r5                                                                            ; work         ;
+;       |registerNbits:r6|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r6                                                                            ; work         ;
+;       |registerNbits:r7|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r7                                                                            ; work         ;
+;       |registerNbits:r8|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r8                                                                            ; work         ;
+;       |registerNbits:r9|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:r9                                                                            ; work         ;
 ;       |registerNbits:rChave10|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:rChave10                                                                      ; work         ;
 ;       |registerNbits:rChave11|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:rChave11                                                                      ; work         ;
 ;       |registerNbits:rChave12|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:rChave12                                                                      ; work         ;
@@ -687,7 +703,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |registerNbits:rChave7|                   ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:rChave7                                                                       ; work         ;
 ;       |registerNbits:rChave8|                   ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:rChave8                                                                       ; work         ;
 ;       |registerNbits:rChave9|                   ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|registerNbits:rChave9                                                                       ; work         ;
-;       |round:roundAes|                          ; 329 (0)           ; 256 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes                                                                              ; work         ;
+;       |round:roundAes|                          ; 316 (0)           ; 256 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes                                                                              ; work         ;
 ;          |addRoundKey:adK10|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|addRoundKey:adK10                                                            ; work         ;
 ;          |addRoundKey:adK11|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|addRoundKey:adK11                                                            ; work         ;
 ;          |addRoundKey:adK12|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|addRoundKey:adK12                                                            ; work         ;
@@ -704,10 +720,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |addRoundKey:adK7|                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|addRoundKey:adK7                                                             ; work         ;
 ;          |addRoundKey:adK8|                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|addRoundKey:adK8                                                             ; work         ;
 ;          |addRoundKey:adK9|                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|addRoundKey:adK9                                                             ; work         ;
-;          |mixColumns:mc1|                       ; 51 (51)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc1                                                               ; work         ;
-;          |mixColumns:mc2|                       ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc2                                                               ; work         ;
-;          |mixColumns:mc3|                       ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc3                                                               ; work         ;
-;          |mixColumns:mc4|                       ; 52 (52)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc4                                                               ; work         ;
+;          |mixColumns:mc1|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc1                                                               ; work         ;
+;          |mixColumns:mc2|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc2                                                               ; work         ;
+;          |mixColumns:mc3|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc3                                                               ; work         ;
+;          |mixColumns:mc4|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|mixColumns:mc4                                                               ; work         ;
 ;          |registerNbits:r17|                    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|registerNbits:r17                                                            ; work         ;
 ;          |registerNbits:r18|                    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|registerNbits:r18                                                            ; work         ;
 ;          |registerNbits:r19|                    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |aes|po_aes:po|round:roundAes|registerNbits:r19                                                            ; work         ;
@@ -1003,7 +1019,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |aes|contador:c|cnt[3]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |aes|contador:c|cnt[2]           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |aes|po_aes:po|key:chaves|k5[7]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |aes|po_aes:po|key:chaves|k11[6] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |aes|po_aes:po|key:chaves|k4[7]  ;
@@ -5877,169 +5893,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+--------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "po_aes:po"             ;
-+-----------------+-------+----------+--------------+
-; Port            ; Type  ; Severity ; Details      ;
-+-----------------+-------+----------+--------------+
-; cont[31..4]     ; Input ; Info     ; Stuck at GND ;
-; entrada1[3..1]  ; Input ; Info     ; Stuck at VCC ;
-; entrada1[7]     ; Input ; Info     ; Stuck at VCC ;
-; entrada1[6]     ; Input ; Info     ; Stuck at GND ;
-; entrada1[5]     ; Input ; Info     ; Stuck at VCC ;
-; entrada1[4]     ; Input ; Info     ; Stuck at GND ;
-; entrada1[0]     ; Input ; Info     ; Stuck at GND ;
-; entrada2[3..2]  ; Input ; Info     ; Stuck at VCC ;
-; entrada2[7..6]  ; Input ; Info     ; Stuck at GND ;
-; entrada2[5]     ; Input ; Info     ; Stuck at VCC ;
-; entrada2[4]     ; Input ; Info     ; Stuck at GND ;
-; entrada2[1]     ; Input ; Info     ; Stuck at GND ;
-; entrada2[0]     ; Input ; Info     ; Stuck at VCC ;
-; entrada3[6..4]  ; Input ; Info     ; Stuck at GND ;
-; entrada3[7]     ; Input ; Info     ; Stuck at VCC ;
-; entrada3[3]     ; Input ; Info     ; Stuck at VCC ;
-; entrada3[2]     ; Input ; Info     ; Stuck at GND ;
-; entrada3[1]     ; Input ; Info     ; Stuck at VCC ;
-; entrada3[0]     ; Input ; Info     ; Stuck at GND ;
-; entrada4[2..0]  ; Input ; Info     ; Stuck at VCC ;
-; entrada4[7]     ; Input ; Info     ; Stuck at GND ;
-; entrada4[6]     ; Input ; Info     ; Stuck at VCC ;
-; entrada4[5]     ; Input ; Info     ; Stuck at GND ;
-; entrada4[4]     ; Input ; Info     ; Stuck at VCC ;
-; entrada4[3]     ; Input ; Info     ; Stuck at GND ;
-; entrada5[4..1]  ; Input ; Info     ; Stuck at VCC ;
-; entrada5[7..5]  ; Input ; Info     ; Stuck at GND ;
-; entrada5[0]     ; Input ; Info     ; Stuck at GND ;
-; entrada6[1..0]  ; Input ; Info     ; Stuck at VCC ;
-; entrada6[7..2]  ; Input ; Info     ; Stuck at GND ;
-; entrada7[3..2]  ; Input ; Info     ; Stuck at VCC ;
-; entrada7[1..0]  ; Input ; Info     ; Stuck at GND ;
-; entrada7[7]     ; Input ; Info     ; Stuck at VCC ;
-; entrada7[6]     ; Input ; Info     ; Stuck at GND ;
-; entrada7[5]     ; Input ; Info     ; Stuck at VCC ;
-; entrada7[4]     ; Input ; Info     ; Stuck at GND ;
-; entrada8[4..2]  ; Input ; Info     ; Stuck at VCC ;
-; entrada8[6..5]  ; Input ; Info     ; Stuck at GND ;
-; entrada8[1..0]  ; Input ; Info     ; Stuck at GND ;
-; entrada8[7]     ; Input ; Info     ; Stuck at VCC ;
-; entrada9[4..1]  ; Input ; Info     ; Stuck at VCC ;
-; entrada9[6..5]  ; Input ; Info     ; Stuck at GND ;
-; entrada9[7]     ; Input ; Info     ; Stuck at VCC ;
-; entrada9[0]     ; Input ; Info     ; Stuck at GND ;
-; entrada10[5..4] ; Input ; Info     ; Stuck at VCC ;
-; entrada10[2..0] ; Input ; Info     ; Stuck at VCC ;
-; entrada10[7]    ; Input ; Info     ; Stuck at VCC ;
-; entrada10[6]    ; Input ; Info     ; Stuck at GND ;
-; entrada10[3]    ; Input ; Info     ; Stuck at GND ;
-; entrada11[6..5] ; Input ; Info     ; Stuck at VCC ;
-; entrada11[3..0] ; Input ; Info     ; Stuck at VCC ;
-; entrada11[7]    ; Input ; Info     ; Stuck at GND ;
-; entrada11[4]    ; Input ; Info     ; Stuck at GND ;
-; entrada12[3..2] ; Input ; Info     ; Stuck at VCC ;
-; entrada12[1..0] ; Input ; Info     ; Stuck at GND ;
-; entrada12[7]    ; Input ; Info     ; Stuck at VCC ;
-; entrada12[6]    ; Input ; Info     ; Stuck at GND ;
-; entrada12[5]    ; Input ; Info     ; Stuck at VCC ;
-; entrada12[4]    ; Input ; Info     ; Stuck at GND ;
-; entrada13[5..3] ; Input ; Info     ; Stuck at GND ;
-; entrada13[7]    ; Input ; Info     ; Stuck at GND ;
-; entrada13[6]    ; Input ; Info     ; Stuck at VCC ;
-; entrada13[2]    ; Input ; Info     ; Stuck at VCC ;
-; entrada13[1]    ; Input ; Info     ; Stuck at GND ;
-; entrada13[0]    ; Input ; Info     ; Stuck at VCC ;
-; entrada14[3..0] ; Input ; Info     ; Stuck at VCC ;
-; entrada14[7]    ; Input ; Info     ; Stuck at VCC ;
-; entrada14[6]    ; Input ; Info     ; Stuck at GND ;
-; entrada14[5]    ; Input ; Info     ; Stuck at VCC ;
-; entrada14[4]    ; Input ; Info     ; Stuck at GND ;
-; entrada15[3..1] ; Input ; Info     ; Stuck at VCC ;
-; entrada15[6..4] ; Input ; Info     ; Stuck at GND ;
-; entrada15[7]    ; Input ; Info     ; Stuck at VCC ;
-; entrada15[0]    ; Input ; Info     ; Stuck at GND ;
-; entrada16[3..1] ; Input ; Info     ; Stuck at GND ;
-; entrada16[7]    ; Input ; Info     ; Stuck at GND ;
-; entrada16[6]    ; Input ; Info     ; Stuck at VCC ;
-; entrada16[5]    ; Input ; Info     ; Stuck at GND ;
-; entrada16[4]    ; Input ; Info     ; Stuck at VCC ;
-; entrada16[0]    ; Input ; Info     ; Stuck at VCC ;
-; chave1[1..0]    ; Input ; Info     ; Stuck at VCC ;
-; chave1[7..6]    ; Input ; Info     ; Stuck at GND ;
-; chave1[5]       ; Input ; Info     ; Stuck at VCC ;
-; chave1[4]       ; Input ; Info     ; Stuck at GND ;
-; chave1[3]       ; Input ; Info     ; Stuck at VCC ;
-; chave1[2]       ; Input ; Info     ; Stuck at GND ;
-; chave2[6..1]    ; Input ; Info     ; Stuck at VCC ;
-; chave2[7]       ; Input ; Info     ; Stuck at GND ;
-; chave2[0]       ; Input ; Info     ; Stuck at GND ;
-; chave3[7..5]    ; Input ; Info     ; Stuck at GND ;
-; chave3[4]       ; Input ; Info     ; Stuck at VCC ;
-; chave3[3]       ; Input ; Info     ; Stuck at GND ;
-; chave3[2]       ; Input ; Info     ; Stuck at VCC ;
-; chave3[1]       ; Input ; Info     ; Stuck at GND ;
-; chave3[0]       ; Input ; Info     ; Stuck at VCC ;
-; chave4[2..1]    ; Input ; Info     ; Stuck at VCC ;
-; chave4[7..5]    ; Input ; Info     ; Stuck at GND ;
-; chave4[4]       ; Input ; Info     ; Stuck at VCC ;
-; chave4[3]       ; Input ; Info     ; Stuck at GND ;
-; chave4[0]       ; Input ; Info     ; Stuck at GND ;
-; chave5[7..6]    ; Input ; Info     ; Stuck at GND ;
-; chave5[2..0]    ; Input ; Info     ; Stuck at GND ;
-; chave5[5]       ; Input ; Info     ; Stuck at VCC ;
-; chave5[4]       ; Input ; Info     ; Stuck at GND ;
-; chave5[3]       ; Input ; Info     ; Stuck at VCC ;
-; chave6[3..1]    ; Input ; Info     ; Stuck at VCC ;
-; chave6[7]       ; Input ; Info     ; Stuck at VCC ;
-; chave6[6]       ; Input ; Info     ; Stuck at GND ;
-; chave6[5]       ; Input ; Info     ; Stuck at VCC ;
-; chave6[4]       ; Input ; Info     ; Stuck at GND ;
-; chave6[0]       ; Input ; Info     ; Stuck at GND ;
-; chave7[7..6]    ; Input ; Info     ; Stuck at VCC ;
-; chave7[3..2]    ; Input ; Info     ; Stuck at GND ;
-; chave7[5]       ; Input ; Info     ; Stuck at GND ;
-; chave7[4]       ; Input ; Info     ; Stuck at VCC ;
-; chave7[1]       ; Input ; Info     ; Stuck at VCC ;
-; chave7[0]       ; Input ; Info     ; Stuck at GND ;
-; chave8[2..1]    ; Input ; Info     ; Stuck at VCC ;
-; chave8[4..3]    ; Input ; Info     ; Stuck at GND ;
-; chave8[7]       ; Input ; Info     ; Stuck at VCC ;
-; chave8[6]       ; Input ; Info     ; Stuck at GND ;
-; chave8[5]       ; Input ; Info     ; Stuck at VCC ;
-; chave8[0]       ; Input ; Info     ; Stuck at GND ;
-; chave9[1..0]    ; Input ; Info     ; Stuck at VCC ;
-; chave9[7]       ; Input ; Info     ; Stuck at VCC ;
-; chave9[6]       ; Input ; Info     ; Stuck at GND ;
-; chave9[5]       ; Input ; Info     ; Stuck at VCC ;
-; chave9[4]       ; Input ; Info     ; Stuck at GND ;
-; chave9[3]       ; Input ; Info     ; Stuck at VCC ;
-; chave9[2]       ; Input ; Info     ; Stuck at GND ;
-; chave10[7..4]   ; Input ; Info     ; Stuck at VCC ;
-; chave10[2..0]   ; Input ; Info     ; Stuck at VCC ;
-; chave10[3]      ; Input ; Info     ; Stuck at GND ;
-; chave11[7..5]   ; Input ; Info     ; Stuck at GND ;
-; chave11[4]      ; Input ; Info     ; Stuck at VCC ;
-; chave11[3]      ; Input ; Info     ; Stuck at GND ;
-; chave11[2]      ; Input ; Info     ; Stuck at VCC ;
-; chave11[1]      ; Input ; Info     ; Stuck at GND ;
-; chave11[0]      ; Input ; Info     ; Stuck at VCC ;
-; chave12[6..4]   ; Input ; Info     ; Stuck at GND ;
-; chave12[2..0]   ; Input ; Info     ; Stuck at GND ;
-; chave12[7]      ; Input ; Info     ; Stuck at VCC ;
-; chave12[3]      ; Input ; Info     ; Stuck at VCC ;
-; chave13[7..4]   ; Input ; Info     ; Stuck at GND ;
-; chave13[2..1]   ; Input ; Info     ; Stuck at GND ;
-; chave13[3]      ; Input ; Info     ; Stuck at VCC ;
-; chave13[0]      ; Input ; Info     ; Stuck at VCC ;
-; chave14[7..6]   ; Input ; Info     ; Stuck at VCC ;
-; chave14[3..0]   ; Input ; Info     ; Stuck at VCC ;
-; chave14[5..4]   ; Input ; Info     ; Stuck at GND ;
-; chave15[3..0]   ; Input ; Info     ; Stuck at VCC ;
-; chave15[5..4]   ; Input ; Info     ; Stuck at GND ;
-; chave15[7]      ; Input ; Info     ; Stuck at GND ;
-; chave15[6]      ; Input ; Info     ; Stuck at VCC ;
-; chave16[5..2]   ; Input ; Info     ; Stuck at VCC ;
-; chave16[7..6]   ; Input ; Info     ; Stuck at GND ;
-; chave16[1..0]   ; Input ; Info     ; Stuck at GND ;
-+-----------------+-------+----------+--------------+
++-----------------------------------------------+
+; Port Connectivity Checks: "po_aes:po"         ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; cont[31..4] ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -6057,7 +5917,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Nov 22 04:03:27 2019
+    Info: Processing started: Fri Nov 22 15:20:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off aes -c aes
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/marina/Documentos/projeto_aes/po_aes/key/key.vhd
@@ -6109,38 +5969,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file aes.vhd
     Info (12022): Found design unit 1: aes-rtl
     Info (12023): Found entity 1: aes
 Info (12127): Elaborating entity "aes" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(34): used explicit default value for signal "entrada1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(35): used explicit default value for signal "entrada2" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(36): used explicit default value for signal "entrada3" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(37): used explicit default value for signal "entrada4" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(38): used explicit default value for signal "entrada5" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(39): used explicit default value for signal "entrada6" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(40): used explicit default value for signal "entrada7" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(41): used explicit default value for signal "entrada8" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(42): used explicit default value for signal "entrada9" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(43): used explicit default value for signal "entrada10" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(44): used explicit default value for signal "entrada11" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(45): used explicit default value for signal "entrada12" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(46): used explicit default value for signal "entrada13" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(47): used explicit default value for signal "entrada14" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(48): used explicit default value for signal "entrada15" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(49): used explicit default value for signal "entrada16" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(51): used explicit default value for signal "chave1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(52): used explicit default value for signal "chave2" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(53): used explicit default value for signal "chave3" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(54): used explicit default value for signal "chave4" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(55): used explicit default value for signal "chave5" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(56): used explicit default value for signal "chave6" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(57): used explicit default value for signal "chave7" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(58): used explicit default value for signal "chave8" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(59): used explicit default value for signal "chave9" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(60): used explicit default value for signal "chave10" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(61): used explicit default value for signal "chave11" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(62): used explicit default value for signal "chave12" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(63): used explicit default value for signal "chave13" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(64): used explicit default value for signal "chave14" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(65): used explicit default value for signal "chave15" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at aes.vhd(66): used explicit default value for signal "chave16" because signal was never assigned a value
 Info (12128): Elaborating entity "po_aes" for hierarchy "po_aes:po"
 Info (12128): Elaborating entity "addRoundKey" for hierarchy "po_aes:po|addRoundKey:adK1"
 Info (12128): Elaborating entity "mux2_1" for hierarchy "po_aes:po|mux2_1:mux1"
@@ -6895,15 +6723,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1742 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 1985 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 258 input pins
     Info (21059): Implemented 128 output pins
-    Info (21061): Implemented 1356 logic cells
+    Info (21061): Implemented 1343 logic cells
     Info (21064): Implemented 256 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 429 megabytes
-    Info: Processing ended: Fri Nov 22 04:03:37 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 423 megabytes
+    Info: Processing ended: Fri Nov 22 15:20:33 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:14
 
 

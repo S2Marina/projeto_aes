@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Nov 22 04:04:01 2019
+Fitter Status : Successful - Fri Nov 22 15:21:07 2019
 Quartus II 32-bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : aes
 Top-level Entity Name : aes
 Family : Cyclone III
-Device : EP3C25F324C6
+Device : EP3C40F780I7
 Timing Models : Final
-Total logic elements : 1,085 / 24,624 ( 4 % )
-    Total combinational functions : 1,038 / 24,624 ( 4 % )
-    Dedicated logic registers : 523 / 24,624 ( 2 % )
+Total logic elements : 1,091 / 39,600 ( 3 % )
+    Total combinational functions : 1,085 / 39,600 ( 3 % )
+    Dedicated logic registers : 523 / 39,600 ( 1 % )
 Total registers : 523
-Total pins : 130 / 216 ( 60 % )
+Total pins : 386 / 536 ( 72 % )
 Total virtual pins : 0
-Total memory bits : 65,536 / 608,256 ( 11 % )
-Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total memory bits : 65,536 / 1,161,216 ( 6 % )
+Embedded Multiplier 9-bit elements : 0 / 252 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

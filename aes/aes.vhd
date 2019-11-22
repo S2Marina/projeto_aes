@@ -10,6 +10,38 @@ entity aes is
 	(
 		clock : in std_logic;
 		reset : in std_logic;
+		chave1   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave2   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave3   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave4   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave5   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave6	: in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave7   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave8   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave9   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave10   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave11   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave12   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave13   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave14   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave15   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		chave16   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada1   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada2   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada3   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada4   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada5   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada6	  : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada7   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada8   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada9   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada10   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada11   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada12   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada13   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada14   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada15   : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		entrada16   : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		saida1   : out std_logic_vector((DATA_WIDTH-1) downto 0);
 		saida2   : out std_logic_vector((DATA_WIDTH-1) downto 0);
 		saida3   : out std_logic_vector((DATA_WIDTH-1) downto 0);
@@ -29,42 +61,7 @@ entity aes is
 	);
 end entity;
 
-architecture rtl of aes is
-
-	signal entrada1 : std_logic_vector(7 downto 0) := x"AE"; 
-	signal entrada2 : std_logic_vector(7 downto 0) := x"2D";
-	signal entrada3 : std_logic_vector(7 downto 0) := x"8A";
-	signal entrada4 : std_logic_vector(7 downto 0) := x"57"; 
-	signal entrada5 : std_logic_vector(7 downto 0) := x"1E";
-	signal entrada6 : std_logic_vector(7 downto 0) := x"03";
-	signal entrada7 : std_logic_vector(7 downto 0) := x"AC";
-	signal entrada8 : std_logic_vector(7 downto 0) := x"9C";
-	signal entrada9 : std_logic_vector(7 downto 0) := x"9E";
-	signal entrada10 : std_logic_vector(7 downto 0) := x"B7";
-	signal entrada11 : std_logic_vector(7 downto 0) := x"6F";
-	signal entrada12 : std_logic_vector(7 downto 0) := x"AC";
-	signal entrada13 : std_logic_vector(7 downto 0) := x"45";
-	signal entrada14 : std_logic_vector(7 downto 0) := x"AF";
-	signal entrada15 : std_logic_vector(7 downto 0) := x"8E";
-	signal entrada16 : std_logic_vector(7 downto 0) := x"51";
-
-	signal chave1 : std_logic_vector(7 downto 0) := x"2B";
-	signal chave2 : std_logic_vector(7 downto 0) := x"7E";
-	signal chave3 : std_logic_vector(7 downto 0) := x"15";
-	signal chave4 : std_logic_vector(7 downto 0) := x"16";
-	signal chave5 : std_logic_vector(7 downto 0) := x"28";
-	signal chave6 : std_logic_vector(7 downto 0) := x"AE";
-	signal chave7 : std_logic_vector(7 downto 0) := x"D2";
-	signal chave8 : std_logic_vector(7 downto 0) := x"A6";
-	signal chave9 : std_logic_vector(7 downto 0) := x"AB";
-	signal chave10 : std_logic_vector(7 downto 0) := x"F7";
-	signal chave11 : std_logic_vector(7 downto 0) := x"15";
-	signal chave12 : std_logic_vector(7 downto 0) := x"88";
-	signal chave13 : std_logic_vector(7 downto 0) := x"09";
-	signal chave14 : std_logic_vector(7 downto 0) := x"CF";
-	signal chave15 : std_logic_vector(7 downto 0) := x"4F";
-	signal chave16 : std_logic_vector(7 downto 0) := x"3C"; 
-	
+architecture rtl of aes is	
 	signal R0 : std_logic;
    signal R1 : std_logic;
    signal R2 : std_logic;
