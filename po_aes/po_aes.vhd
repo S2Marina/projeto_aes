@@ -74,7 +74,7 @@ signal regE1, regE2, regE3, regE4, regE5, regE6, regE7, regE8, regE9, regE10, re
 signal regR1, regR2, regR3, regR4, regR5, regR6, regR7, regR8, regR9, regR10, regR11, regR12, regR13, regR14, regR15, regR16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 signal regChave1, regChave2, regChave3, regChave4, regChave5, regChave6, regChave7, regChave8, regChave9, regChave10, regChave11, regChave12, regChave13, regChave14, regChave15, regChave16 : std_logic_vector((DATA_WIDTH-1) downto 0);
-
+signal mChave1, mChave2, mChave3, mChave4, mChave5, mChave6, mChave7, mChave8, mChave9, mChave10, mChave11, mChave12 ,mChave13, mChave14, mChave15, mChave16 : std_logic_vector((DATA_WIDTH-1) downto 0);
 
 component registerNbits is
 	generic
@@ -310,67 +310,67 @@ begin
 
 adK1 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave1, entrada => entrada1, saida => regA1);
+	port map (clock => clk, chave => regChave1, entrada => entrada1, saida => regA1);
 
 adK2 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave2, entrada => entrada2, saida => regA2);
+	port map (clock => clk, chave => regChave2, entrada => entrada2, saida => regA2);
 
 adK3 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave3, entrada => entrada3, saida => regA3);
+	port map (clock => clk, chave => regChave3, entrada => entrada3, saida => regA3);
 
 adK4 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave4, entrada => entrada4,	saida => regA4);
+	port map (clock => clk, chave => regChave4, entrada => entrada4,	saida => regA4);
 
 adK5 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave5, entrada => entrada5 , saida => regA5);
+	port map (clock => clk, chave => regChave5, entrada => entrada5 , saida => regA5);
 
 adK6 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave6, entrada => entrada6, saida => regA6);
+	port map (clock => clk, chave => regChave6, entrada => entrada6, saida => regA6);
 
 adK7 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave7, entrada => entrada7, saida => regA7);
+	port map (clock => clk, chave => regChave7, entrada => entrada7, saida => regA7);
 
 adK8 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave8, entrada => entrada8, saida => regA8);
+	port map (clock => clk, chave => regChave8, entrada => entrada8, saida => regA8);
 
 adK9 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave9, entrada => entrada9, saida => regA9);
+	port map (clock => clk, chave => regChave9, entrada => entrada9, saida => regA9);
 
 adK10 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave10, entrada => entrada10, saida => regA10);
+	port map (clock => clk, chave => regChave10, entrada => entrada10, saida => regA10);
 
 adK11 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave11, entrada => entrada11, saida => regA11);
+	port map (clock => clk, chave => regChave11, entrada => entrada11, saida => regA11);
 
 adK12 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave12, entrada => entrada12, saida => regA12);
+	port map (clock => clk, chave => regChave12, entrada => entrada12, saida => regA12);
 
 adK13 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave13, entrada => entrada13, saida => regA13);
+	port map (clock => clk, chave => regChave13, entrada => entrada13, saida => regA13);
 
 adK14 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave14, entrada => entrada14, saida => regA14);
+	port map (clock => clk, chave => regChave14, entrada => entrada14, saida => regA14);
 
 adK15 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave15, entrada => entrada15, saida => regA15);
+	port map (clock => clk, chave => regChave15, entrada => entrada15, saida => regA15);
 
 adK16 : addRoundKey
 	generic map	(DATA_WIDTH => DATA_WIDTH)
-	port map (clock => clk, chave => chave16, entrada => entrada16, saida => regA16);
+	port map (clock => clk, chave => regChave16, entrada => entrada16, saida => regA16);
 
 mux1 : mux2_1
 	generic map (DATA_WIDTH => DATA_WIDTH)
@@ -502,7 +502,7 @@ r16: registerNbits
 	
 roundAes : round
 	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (clk => clk, entrada1 => regE1, entrada2 => regE2, entrada3 => regE3, entrada4 => regE4, entrada5 => regE5, entrada6 => regE6, entrada7 => regE7, entrada8 => regE8, entrada9 => regE9, entrada10 => regE10, entrada11 => regE11, entrada12 => regE12, entrada13 => regE13, entrada14 => regE14, entrada15 => regE15, entrada16 => regE16, chave1 => chave1, chave2 => chave2, chave3 => chave3, chave4 => chave4, chave5 => chave5, chave6 => chave6, chave7 => chave7, chave8 => chave8, chave9 => chave9, chave10 => chave10, chave11 => chave11, chave12 => chave12, chave13 => chave13, chave14 => chave14, chave15 => chave15, chave16 => chave16, saida1 => s1, saida2 => s2, saida3 => s3, saida4 => s4, saida5 => s5, saida6 => s6, saida7 => s7, saida8 => s8, saida9 => s9, saida10 => s10, saida11 => s11, saida12 => s12, saida13 => s13, saida14 => s14, saida15 => s15, saida16 => s16);
+	port map (clk => clk, entrada1 => regE1, entrada2 => regE2, entrada3 => regE3, entrada4 => regE4, entrada5 => regE5, entrada6 => regE6, entrada7 => regE7, entrada8 => regE8, entrada9 => regE9, entrada10 => regE10, entrada11 => regE11, entrada12 => regE12, entrada13 => regE13, entrada14 => regE14, entrada15 => regE15, entrada16 => regE16, chave1 => regChave1, chave2 => regChave2, chave3 => regChave3, chave4 => regChave4, chave5 => regChave5, chave6 => regChave6, chave7 => regChave7, chave8 => regChave8, chave9 => regChave9, chave10 => regChave10, chave11 => regChave11, chave12 => regChave12, chave13 => regChave13, chave14 => regChave14, chave15 => regChave15, chave16 => regChave16, saida1 => s1, saida2 => s2, saida3 => s3, saida4 => s4, saida5 => s5, saida6 => s6, saida7 => s7, saida8 => s8, saida9 => s9, saida10 => s10, saida11 => s11, saida12 => s12, saida13 => s13, saida14 => s14, saida15 => s15, saida16 => s16);
 	
 r17: registerNbits
 	generic map (DATA_WIDTH => DATA_WIDTH)
@@ -570,10 +570,139 @@ r32: registerNbits
 	
 last_roundAes : last_round
 	generic map (DATA_WIDTH => DATA_WIDTH)
-	port map (clk => clk, entrada1 => regR1, entrada2 => regR2, entrada3 => regR3, entrada4 => regR4, entrada5 => regR5, entrada6 => regR6, entrada7 => regR7, entrada8 => regR8, entrada9 => regR9, entrada10 => regR10, entrada11 => regR11, entrada12 => regR12, entrada13 => regR13, entrada14 => regR14, entrada15 => regR15, entrada16 => regR16, chave1 => chave1, chave2 => chave2, chave3 => chave3, chave4 => chave4, chave5 => chave5, chave6 => chave6, chave7 => chave7, chave8 => chave8, chave9 => chave9, chave10 => chave10, chave11 => chave11, chave12 => chave12, chave13 => chave13, chave14 => chave14, chave15 => chave15, chave16 => chave16, saida1 => saida1, saida2 => saida2, saida3 => saida3, saida4 => saida4, saida5 => saida5, saida6 => saida6, saida7 => saida7, saida8 => saida8, saida9 => saida9, saida10 => saida10, saida11 => saida11, saida12 => saida12, saida13 => saida13, saida14 => saida14, saida15 => saida15, saida16 => saida16);	
+	port map (clk => clk, entrada1 => regR1, entrada2 => regR2, entrada3 => regR3, entrada4 => regR4, entrada5 => regR5, entrada6 => regR6, entrada7 => regR7, entrada8 => regR8, entrada9 => regR9, entrada10 => regR10, entrada11 => regR11, entrada12 => regR12, entrada13 => regR13, entrada14 => regR14, entrada15 => regR15, entrada16 => regR16, chave1 => regChave1, chave2 => regChave2, chave3 => regChave3, chave4 => regChave4, chave5 => regChave5, chave6 => regChave6, chave7 => regChave7, chave8 => regChave8, chave9 => regChave9, chave10 => regChave10, chave11 => regChave11, chave12 => regChave12, chave13 => regChave13, chave14 => regChave14, chave15 => regChave15, chave16 => regChave16, saida1 => saida1, saida2 => saida2, saida3 => saida3, saida4 => saida4, saida5 => saida5, saida6 => saida6, saida7 => saida7, saida8 => saida8, saida9 => saida9, saida10 => saida10, saida11 => saida11, saida12 => saida12, saida13 => saida13, saida14 => saida14, saida15 => saida15, saida16 => saida16);	
 	
 chaves : key
 	generic map (DATA_WIDTH => DATA_WIDTH)
 	port map (cont => cont, k1 => k1, k2 => k2, k3 => k3, k4 => k4, k5 => k5, k6 => k6, k7 => k7, k8 => k8, k9 => k9, k10 => k10, k11 => k11, k12 => k12, k13 => k13, k14 => k14, k15 => k15, k16 => k16);
+
+rChave1 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave1, q => regChave1);	
 	
+rChave2 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave2, q => regChave2);	
+	
+rChave3 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave3, q => regChave3);	
+	
+rChave4 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave4, q => regChave4);	
+	
+rChave5 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave5, q => regChave5);	
+	
+rChave6 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave6, q => regChave6);	
+	
+rChave7 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave7, q => regChave7);	
+	
+rChave8 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave8, q => regChave8);	
+	
+rChave9 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave9, q => regChave9);	
+	
+rChave10 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave10, q => regChave10);	
+	
+rChave11 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave11, q => regChave11);	
+	
+rChave12 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave12, q => regChave12);	
+	
+rChave13 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave13, q => regChave13);	
+	
+rChave14 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave14, q => regChave14);
+	
+rChave15 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave15, q => regChave15);	
+	
+rChave16 : registerNbits	
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (clock => clk, enable => enableR, d => mChave16, q => regChave16);	
+	
+muxChave1 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave1, b => k1, result => mChave1); 
+
+muxChave2 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave2, b => k2, result => mChave2); 
+
+muxChave3 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave3, b => k3, result => mChave3); 
+
+muxChave4 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave4, b => k4, result => mChave4); 
+
+muxChave5 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave5, b => k5, result => mChave5); 
+
+muxChave6 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave6, b => k6, result => mChave6); 
+
+muxChave7 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave7, b => k7, result => mChave7); 
+
+muxChave8 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave8, b => k8, result => mChave8); 	
+
+muxChave9 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave9, b => k9, result => mChave9); 
+
+muxChave10 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave10, b => k10, result => mChave10); 
+
+muxChave11 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave11, b => k11, result => mChave11); 
+
+muxChave12 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave12, b => k12, result => mChave12); 
+
+muxChave13 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave13, b => k13, result => mChave13); 
+
+muxChave14 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave14, b => k14, result => mChave14); 
+
+muxChave15 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave15, b => k15, result => mChave15); 
+
+muxChave16 : mux2_1
+	generic map (DATA_WIDTH => DATA_WIDTH)
+	port map (sel => selMux, a => chave16, b => k16, result => mChave16); 		
+	
+
 end rtl;
