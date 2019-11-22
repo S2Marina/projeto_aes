@@ -21,7 +21,7 @@ end entity;
 architecture rtl of mux2_1 is
 begin
 
-	result <= a when sel = '0' else
+	result <= a when sel = '1' else
 				 b;
 
 end rtl;

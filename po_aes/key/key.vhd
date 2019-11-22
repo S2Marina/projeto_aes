@@ -11,7 +11,7 @@ entity key is
 
 	port 
 	(
-		cont : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		cont : in integer;
 		k1 : out std_logic_vector((DATA_WIDTH-1) downto 0);
 		k2 : out std_logic_vector((DATA_WIDTH-1) downto 0);
 		k3 : out std_logic_vector((DATA_WIDTH-1) downto 0);
@@ -36,7 +36,7 @@ architecture rtl of key is
 begin
 	process (cont) is
 	begin
-		if (cont = "0000001") then
+		if (cont = 1) then
 			k1 <= x"2b";
 			k2 <= x"7e";
 			k3 <= x"15";
@@ -53,7 +53,7 @@ begin
 			k14 <= x"cf";
 			k15 <= x"4f";
 			k16 <= x"3c";
-		elsif (cont = "00000010") then
+		elsif (cont = 2) then
 			k1 <= x"a0";
 			k2 <= x"fa";
 			k3 <= x"fe";
@@ -70,7 +70,7 @@ begin
 			k14 <= x"6c";
 			k15 <= x"76";
 			k16 <= x"05";
-		elsif (cont = "00000011") then
+		elsif (cont = 3) then
 			k1 <= x"f2";
 			k2 <= x"c2";
 			k3 <= x"95";
@@ -87,7 +87,7 @@ begin
 			k14 <= x"59";
 			k15 <= x"f6";
 			k16 <= x"7f";
-		elsif (cont = "00000100") then
+		elsif (cont = 4) then
 			k1 <= x"3d";
 			k2 <= x"80";
 			k3 <= x"47";
@@ -104,7 +104,7 @@ begin
 			k14 <= x"7a";
 			k15 <= x"88";
 			k16 <= x"3b";
-		elsif (cont = "00000101") then
+		elsif (cont = 5) then
 			k1 <= x"ef";
 			k2 <= x"44";
 			k3 <= x"a5";
@@ -121,7 +121,7 @@ begin
 			k14 <= x"0b";
 			k15 <= x"ad";
 			k16 <= x"00";
-		elsif (cont = "00000110") then
+		elsif (cont = 6) then
 			k1 <= x"db";
 			k2 <= x"0b";
 			k3 <= x"ad";
@@ -138,7 +138,7 @@ begin
 			k14 <= x"f2";
 			k15 <= x"b8";
 			k16 <= x"bc";	
-	  elsif (cont = "00000111") then
+	  elsif (cont = 7) then
 			k1 <= x"11";
 			k2 <= x"f9";
 			k3 <= x"15";
@@ -155,7 +155,7 @@ begin
 			k14 <= x"f9";
 			k15 <= x"86";
 			k16 <= x"41";		
-	 elsif (cont = "00001000") then
+	 elsif (cont = 8) then
 			k1 <= x"ca";
 			k2 <= x"00";
 			k3 <= x"93";
@@ -172,7 +172,7 @@ begin
 			k14 <= x"a6";
 			k15 <= x"4f";
 			k16 <= x"b2";		
-	elsif (cont = "00001001") then
+	elsif (cont = 9) then
 			k1 <= x"4e";
 			k2 <= x"a6";
 			k3 <= x"dc";
@@ -189,7 +189,7 @@ begin
 			k14 <= x"2b";
 			k15 <= x"f5";
 			k16 <= x"60";		
-	elsif (cont = "00001010") then
+	elsif (cont = 10) then
 			k1 <= x"7f";
 			k2 <= x"8d";
 			k3 <= x"29";
@@ -206,7 +206,7 @@ begin
 			k14 <= x"d1";
 			k15 <= x"29";
 			k16 <= x"41";	
-	elsif (cont = "00001011") then
+	elsif (cont = 11) then
 			k1 <= x"57";
 			k2 <= x"5c";
 			k3 <= x"00";

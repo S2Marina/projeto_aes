@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="single_port_rom">
-		<CBX_INST_ENTRY INSTANCE_NAME="|single_port_rom|altsyncram:rom_rtl_0" CBX_FILE_NAME="altsyncram_5l81.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

@@ -1,0 +1,22 @@
+|pc_aes
+clk => state~1.DATAIN
+input[0] => LessThan0.IN8
+input[0] => LessThan1.IN8
+input[1] => LessThan0.IN7
+input[1] => LessThan1.IN7
+input[2] => LessThan0.IN6
+input[2] => LessThan1.IN6
+input[3] => LessThan0.IN5
+input[3] => LessThan1.IN5
+reset => state~3.DATAIN
+R0 <= R0.DB_MAX_OUTPUT_PORT_TYPE
+R1 <= R1.DB_MAX_OUTPUT_PORT_TYPE
+R2 <= R2.DB_MAX_OUTPUT_PORT_TYPE
+R3 <= R3.DB_MAX_OUTPUT_PORT_TYPE
+R4 <= R4.DB_MAX_OUTPUT_PORT_TYPE
+R5 <= R5.DB_MAX_OUTPUT_PORT_TYPE
+Rchave <= Rchave.DB_MAX_OUTPUT_PORT_TYPE
+Lr <= Lr.DB_MAX_OUTPUT_PORT_TYPE
+selMux <= selMux.DB_MAX_OUTPUT_PORT_TYPE
+
+
