@@ -307,7 +307,7 @@ begin
   process (clock)
   begin
     case address1 is
-      when "00000000" => saida1 <= my_rom(0);
+    when "00000000" => saida1 <= my_rom(0);
 		when "00000001" => saida1 <= my_rom(1);
 		when "00000010" => saida1 <= my_rom(2);
 		when "00000011" => saida1 <= my_rom(3);
@@ -562,7 +562,7 @@ begin
 		when "11111100" => saida1 <= my_rom(252);
 		when "11111101" => saida1 <= my_rom(253);
 		when "11111110" => saida1 <= my_rom(254);
-		when "11111111" => saida1 <= my_rom(255);
+		when others => saida1 <= my_rom(255);
   end case;
   
   
@@ -823,8 +823,9 @@ begin
 		when "11111100" => saida2 <= my_rom(252);
 		when "11111101" => saida2 <= my_rom(253);
 		when "11111110" => saida2 <= my_rom(254);
-		when "11111111" => saida2 <= my_rom(255);
-  end case;
+		when others => saida2 <= my_rom(255);		  
+   end case;
+  
 	  case address3 is
       when "00000000" => saida3 <= my_rom(0);
 		when "00000001" => saida3 <= my_rom(1);
@@ -1081,7 +1082,8 @@ begin
 		when "11111100" => saida3 <= my_rom(252);
 		when "11111101" => saida3 <= my_rom(253);
 		when "11111110" => saida3 <= my_rom(254);
-		when "11111111" => saida3 <= my_rom(255);
+		when others => saida3 <= my_rom(255);
+		 
   end case;
 	  case address4 is
 			when "00000000" => saida4 <= my_rom(0);
@@ -1339,7 +1341,8 @@ begin
 			when "11111100" => saida4 <= my_rom(252);
 			when "11111101" => saida4 <= my_rom(253);
 			when "11111110" => saida4 <= my_rom(254);
-			when "11111111" => saida4 <= my_rom(255);
+			when others => saida4 <= my_rom(255);
+
 	  end case;
 	  case address5 is
 			when "00000000" => saida5 <= my_rom(0);
@@ -1597,7 +1600,8 @@ begin
 			when "11111100" => saida5 <= my_rom(252);
 			when "11111101" => saida5 <= my_rom(253);
 			when "11111110" => saida5 <= my_rom(254);
-			when "11111111" => saida5 <= my_rom(255);
+			when others => saida5 <= my_rom(255);
+			 
 	  end case;
 	  case address6 is
 			when "00000000" => saida6 <= my_rom(0);
@@ -1855,7 +1859,8 @@ begin
 			when "11111100" => saida6 <= my_rom(252);
 			when "11111101" => saida6 <= my_rom(253);
 			when "11111110" => saida6 <= my_rom(254);
-			when "11111111" => saida6 <= my_rom(255);
+			when others => saida6 <= my_rom(255);
+			 
 	  end case;
 	  case address7 is
 			when "00000000" => saida7 <= my_rom(0);
@@ -2113,7 +2118,8 @@ begin
 			when "11111100" => saida7 <= my_rom(252);
 			when "11111101" => saida7 <= my_rom(253);
 			when "11111110" => saida7 <= my_rom(254);
-			when "11111111" => saida7 <= my_rom(255);
+			when others => saida7 <= my_rom(255);
+			 
 	  end case;
 	  case address8 is
 			when "00000000" => saida8 <= my_rom(0);
@@ -2371,7 +2377,8 @@ begin
 			when "11111100" => saida8 <= my_rom(252);
 			when "11111101" => saida8 <= my_rom(253);
 			when "11111110" => saida8 <= my_rom(254);
-			when "11111111" => saida8 <= my_rom(255);
+			when others => saida8 <= my_rom(255);
+			
 	  end case;
 	  case address9 is
 			when "00000000" => saida9 <= my_rom(0);
@@ -2629,7 +2636,8 @@ begin
 			when "11111100" => saida9 <= my_rom(252);
 			when "11111101" => saida9 <= my_rom(253);
 			when "11111110" => saida9 <= my_rom(254);
-			when "11111111" => saida9 <= my_rom(255);
+			when others => saida9 <= my_rom(255);
+			  
 	  end case;
 	  case address10 is
 			when "00000000" => saida10 <= my_rom(0);
@@ -2887,7 +2895,8 @@ begin
 			when "11111100" => saida10 <= my_rom(252);
 			when "11111101" => saida10 <= my_rom(253);
 			when "11111110" => saida10 <= my_rom(254);
-			when "11111111" => saida10 <= my_rom(255);
+			when others => saida10 <= my_rom(255);
+			 
 	  end case;
 	  case address11 is
 			when "00000000" => saida11 <= my_rom(0);
@@ -3145,7 +3154,8 @@ begin
 			when "11111100" => saida11 <= my_rom(252);
 			when "11111101" => saida11 <= my_rom(253);
 			when "11111110" => saida11 <= my_rom(254);
-			when "11111111" => saida11 <= my_rom(255);
+			when others => saida11 <= my_rom(255);
+			  
 	  end case;
 	  case address12 is
 			when "00000000" => saida12 <= my_rom(0);
@@ -3403,7 +3413,8 @@ begin
 			when "11111100" => saida12 <= my_rom(252);
 			when "11111101" => saida12 <= my_rom(253);
 			when "11111110" => saida12 <= my_rom(254);
-			when "11111111" => saida12 <= my_rom(255);
+			when others => saida12 <= my_rom(255);
+			  
 	  end case;
 	  case address13 is
 			when "00000000" => saida13 <= my_rom(0);
@@ -3661,7 +3672,8 @@ begin
 			when "11111100" => saida13 <= my_rom(252);
 			when "11111101" => saida13 <= my_rom(253);
 			when "11111110" => saida13 <= my_rom(254);
-			when "11111111" => saida13 <= my_rom(255);
+			when others => saida13 <= my_rom(255);
+			  
 	  end case;
 	  case address14 is
 			when "00000000" => saida14 <= my_rom(0);
@@ -3919,7 +3931,8 @@ begin
 			when "11111100" => saida14 <= my_rom(252);
 			when "11111101" => saida14 <= my_rom(253);
 			when "11111110" => saida14 <= my_rom(254);
-			when "11111111" => saida14 <= my_rom(255);
+			when others => saida14 <= my_rom(255);
+			  
 	  end case;
 	  case address15 is
 			when "00000000" => saida15 <= my_rom(0);
@@ -4177,7 +4190,8 @@ begin
 			when "11111100" => saida15 <= my_rom(252);
 			when "11111101" => saida15 <= my_rom(253);
 			when "11111110" => saida15 <= my_rom(254);
-			when "11111111" => saida15 <= my_rom(255);
+			when others => saida15 <= my_rom(255);
+			 
 	  end case;
 	  case address16 is
       when "00000000" => saida16 <= my_rom(0);
@@ -4435,7 +4449,8 @@ begin
 		when "11111100" => saida16 <= my_rom(252);
 		when "11111101" => saida16 <= my_rom(253);
 		when "11111110" => saida16 <= my_rom(254);
-		when "11111111" => saida16 <= my_rom(255);
+		when others => saida16 <= my_rom(255);
+		 
   end case;
  end process;
 

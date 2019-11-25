@@ -1,6 +1,6 @@
 Flow report for aes
-Fri Nov 22 15:56:37 2019
-Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Fri Nov 22 18:22:03 2019
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
 ---------------------
@@ -40,14 +40,14 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 22 15:56:37 2019      ;
-; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Flow Status                        ; Successful - Fri Nov 22 18:22:03 2019      ;
+; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; aes                                        ;
 ; Top-level Entity Name              ; aes                                        ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C40F780I7                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,091 / 39,600 ( 3 % )                     ;
+; Total logic elements               ; 1,098 / 39,600 ( 3 % )                     ;
 ;     Total combinational functions  ; 1,085 / 39,600 ( 3 % )                     ;
 ;     Dedicated logic registers      ; 523 / 39,600 ( 1 % )                       ;
 ; Total registers                    ; 523                                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/22/2019 15:55:28 ;
+; Start date & time ; 11/22/2019 18:20:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; aes                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.157444892806923                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 124191492202587.157445405000744       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                   ; --            ; --          ; --             ;
@@ -94,26 +94,26 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 426 MB              ; 00:00:12                           ;
-; Fitter                    ; 00:00:32     ; 1.0                     ; 626 MB              ; 00:00:32                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 384 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 412 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 355 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:56     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 423 MB              ; 00:00:13                           ;
+; Fitter                    ; 00:00:33     ; 1.0                     ; 605 MB              ; 00:00:30                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 386 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 422 MB              ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 355 MB              ; 00:00:03                           ;
+; Total                     ; 00:01:05     ; --                      ; --                  ; 00:00:54                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                             ;
-+---------------------------+----------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname     ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+----------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; marina-Lenovo-G40-70 ; Linux Mint ; 19         ; x86_64         ;
-; Fitter                    ; marina-Lenovo-G40-70 ; Linux Mint ; 19         ; x86_64         ;
-; Assembler                 ; marina-Lenovo-G40-70 ; Linux Mint ; 19         ; x86_64         ;
-; TimeQuest Timing Analyzer ; marina-Lenovo-G40-70 ; Linux Mint ; 19         ; x86_64         ;
-; EDA Netlist Writer        ; marina-Lenovo-G40-70 ; Linux Mint ; 19         ; x86_64         ;
-+---------------------------+----------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; U03L057          ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; U03L057          ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; U03L057          ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; U03L057          ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; U03L057          ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------

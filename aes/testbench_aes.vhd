@@ -126,7 +126,7 @@ begin
 	test : aes
 		port map (clock => clock, reset => reset, entrada1 => entrada1, entrada2 => entrada2, entrada3 => entrada3, entrada4 => entrada4, entrada5 => entrada5, entrada6 => entrada6, entrada7 => entrada7, entrada8 => entrada8, entrada9 => entrada9, entrada10 => entrada10, entrada11 => entrada11, entrada12 => entrada12, entrada13 => entrada13, entrada14 => entrada14, entrada15 => entrada15, entrada16 => entrada16, chave1 => chave1, chave2 => chave2, chave3 => chave3, chave4 => chave4, chave5 => chave5, chave6 => chave6, chave7 => chave7, chave8 => chave8, chave9 => chave9, chave10 => chave10, chave11 => chave11, chave12 => chave12, chave13 => chave13, chave14 => chave14, chave15 => chave15, chave16 => chave16, saida1 => saida1, saida2 => saida2, saida3 => saida3, saida4 => saida4, saida5 => saida5, saida6 => saida6, saida7 => saida7, saida8 => saida8, saida9 => saida9, saida10 => saida10, saida11 => saida11, saida12 => saida12, saida13 => saida13, saida14 => saida14, saida15 => saida15, saida16 => saida16);	
 
-	clock <= not clock after 2ns;
+	clock <= not clock after 4ns;
 
 	
 process
@@ -167,9 +167,9 @@ begin
 	 chave16 <= x"3C"; 
 	 
 	 reset <= '1';
-	
-   wait for 2ns;	
+   wait for 4ns;	
 	 reset <= '0';	
+
 	wait;
 end process;	
 	
